@@ -17,6 +17,7 @@
   "dependencies": {
     "@react-three/drei": "^9.36.0",
     "@react-three/fiber": "^8.8.10",
+    "@react-three/flex": "^1.0.0",
     "@studio-freight/lenis": "^0.2.13",
     "gatsby": "^4.24.4",
     "gatsby-plugin-dark-mode": "^1.1.2",

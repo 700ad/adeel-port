@@ -16,12 +16,12 @@ function Scene() {
     <>
       <MovingSpot
         depthBuffer={depthBuffer}
-        color="#05299E"
+        color="#dcb697"
         position={[3, 3, 2]}
       />
       <MovingSpot
         depthBuffer={depthBuffer}
-        color="#B3001B"
+        color="#fc7001"
         position={[-3, 3, 3]}
       />
       <mesh
@@ -201,6 +201,11 @@ export default Footer;
       <button className="p-4 px-8 my-20 rounded-full bg-white/90 hover:bg-white/10 transition-all duration-300 text-black hover:text-white">
         Contact Us
       </button>
+    </div>
+    <div className="absolute top-0 left-0 w-80 border border-white">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, hic. Sed
+      maiores debitis illo, laudantium modi quasi, veniam excepturi perferendis
+      sunt explicabo dolorum tempore omnis culpa quae itaque error repellat.
     </div>
     <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 mb-4">
       <div className="flex flex-col">
