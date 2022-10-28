@@ -5,8 +5,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 export default function Hero() {
   useEffect(() => {
     gsap.to("#ball", {
@@ -41,9 +39,9 @@ export default function Hero() {
             width="20"
             height="20"
             viewBox="0 0 20 20"
-            className="w-full h-full"
+            className="w-full h-full dark:stroke-white stroke-black"
           >
-            <g transform="translate(-337.5 -10)" stroke="black">
+            <g transform="translate(-337.5 -10)">
               <line
                 y2="20"
                 transform="translate(347.5 10)"

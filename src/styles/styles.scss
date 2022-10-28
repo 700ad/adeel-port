@@ -143,3 +143,11 @@ body::before {
     padding: grid(2) grid(3) grid(1) grid(2);
   }
 }
+
+.footer-link {
+  @apply border-b mb-2 hover:bg-white/5 transition-all duration-300 cursor-pointer active:bg-white/20 focus:bg-white/10 border-white w-full text-2xl p-4;
+}
+
+.btn {
+  @apply py-1 px-4 cursor-pointer mr-4 bg-black dark:bg-white hover:bg-white/60 hover:dark:bg-black/60 hover:dark:text-white hover:text-black transition-all duration-300 dark:text-black rounded-full uppercase text-white text-sm md:text-base;
+}
