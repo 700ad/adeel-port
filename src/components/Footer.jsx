@@ -6,6 +6,14 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, SpotLight, useDepthBuffer } from "@react-three/drei";
 import { Link } from "gatsby";
 
+import gsap from "gsap/dist/gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+import FullWidthText from "../components/FullWidthText";
+import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function Scene() {
   const depthBuffer = useDepthBuffer({ frames: 1 });
   const { nodes, materials } = useGLTF(
@@ -78,6 +86,20 @@ const Footer = () => {
       console.error("Failed to copy: ", err);
     }
   };
+
+  useEffect(() => {
+    gsap.to(".name div", {
+      scrollTrigger: {
+        trigger: "#fname",
+        scrub: true,
+      },
+      opacity: 1,
+      transform: "translateY(0px)",
+      stagger: 0.09,
+      ease: "power4.easein",
+    });
+  }, []);
+
   return (
     <div>
       <footer className="footer text-white">
@@ -94,7 +116,30 @@ const Footer = () => {
               <ambientLight intensity={0.015} />
               <Scene />
             </Canvas>
-            <div className="absolute hidden inset-0 backdrop-blur-md"></div>
+            <div className="absolute top-0 left-0 text-white p-4 md:p-8">
+              <div
+                id="fname"
+                className="name text-[4vw] flex p-2 border border-white/5 rounded-xl backdrop-blur-3xl leading-none"
+              >
+                <div className=" opacity-0 translate-y-1">A</div>
+                <div className=" opacity-0 translate-y-2">D</div>
+                <div className=" opacity-0 translate-y-3">E</div>
+                <div className=" opacity-0 translate-y-4">E</div>
+                <div className=" opacity-0 translate-y-5">L</div>
+              </div>
+              <div
+                id="lname"
+                className="name text-[4vw] flex p-2 border border-white/5 rounded-xl backdrop-blur-3xl leading-none"
+              >
+                <div className=" opacity-0 translate-y-3">F</div>
+                <div className=" opacity-0 translate-y-4">A</div>
+                <div className=" opacity-0 translate-y-5">R</div>
+                <div className=" opacity-0 translate-y-6">Z</div>
+                <div className=" opacity-0 translate-y-7">A</div>
+                <div className=" opacity-0 translate-y-8">N</div>
+                <div className=" opacity-0 translate-y-8">D</div>
+              </div>
+            </div>
             <div className="absolute bottom-8  left-8 text-white flex flex-col items-center justify-end">
               <div className="flex flex-col p-2 border border-white/5 rounded-xl backdrop-blur-3xl">
                 <div className="uppercase p-1 w-full flex">

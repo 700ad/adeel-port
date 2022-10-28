@@ -35,19 +35,19 @@ export default function Layout({ children }) {
 
     requestAnimationFrame(raf);
 
-    // gsap.to("#inner", {
-    //   height: "0px",
-    //   y: "100px",
-    //   ease: "power4.easeInOut",
-    //   duration: 1,
-    //   delay: 0.5,
-    // });
-    // gsap.to("#outer", {
-    //   transform: "translateY(-100vh)",
-    //   delay: 1.5,
-    //   ease: "power4.easeInOut",
-    //   duration: 1,
-    // });
+    gsap.to("#inner", {
+      height: "0px",
+      y: "100px",
+      ease: "power4.easeInOut",
+      duration: 1,
+      delay: 0.5,
+    });
+    gsap.to("#outer", {
+      transform: "translateY(-100vh)",
+      delay: 1.5,
+      ease: "power4.easeInOut",
+      duration: 1,
+    });
 
     const images = document.querySelectorAll(".ukiyo");
     images.forEach((image) => {
@@ -59,12 +59,12 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      {/* <div
+      <div
         id="outer"
         className="w-screen h-screen bg-black fixed inset-0 z-50 flex items-center justify-center"
       >
         <div id="inner" className="w-40 h-60 bg-white"></div>
-      </div> */}
+      </div>
       <Nav />
       {children}
       <Footer />

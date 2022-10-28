@@ -5,7 +5,7 @@ import * as THREE from "three";
 import React, { useRef, useState } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
 import { useTexture, shaderMaterial } from "@react-three/drei";
-
+import sunsi from "../images/sunset.png";
 import sunrise from "../images/adeel.jpeg";
 import sunset from "../images/adeel2.jpeg";
 import noiseImg from "../images/noise.jpeg";
@@ -84,8 +84,25 @@ function FadingImage() {
 const Header = () => {
   return (
     <>
-      <div className="w-screen h-screen sunsets dark:sunset p-4 md:p-8 flex flex-col items-start justify-end">
+      <div className="w-screen relative h-screen unsets dark:sunet p-4 md:p-8 flex flex-col items-start justify-end">
         <div className="w-full text-black dark:text-white">
+          <div className="absolute inset-0">
+            <section className="relative md:h-[100vh] h-screen w-full">
+              <img
+                className="ukiyo fv_img1 filter dark:invert  "
+                src={sunsi}
+                data-u-speed="2.0"
+                data-u-willchange
+                decoding="async"
+              />
+            </section>
+          </div>
+          <div className="absolute inset-0">
+            <Canvas camera={{ position: [0, 0, 2], fov: 50 }}>
+              <FadingImage />
+            </Canvas>
+          </div>
+
           <FullWidthText word1="ADEEL FARZAND" />
           <div className="grid grid-cols-4 relative z-10 mt-4">
             <div className="col-span-1 text-3xl pl-2 font-medium uppercase">
@@ -127,9 +144,7 @@ const AboutSection = () => {
           quod autem maiores. Reiciendis, cum? Voluptatem iusto harum beatae
         </div>
       </div> */}
-      <Canvas camera={{ position: [0, 0, 2], fov: 50 }}>
-        <FadingImage />
-      </Canvas>
+      <div className="col-span-1"></div>
     </div>
   );
 };

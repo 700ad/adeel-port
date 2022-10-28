@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import ThemeToggle from "./themeToggle";
 
 const Nav = () => {
   return (
     <>
-      <div className="absolute top-0 left-0 right-0 md:h-20 flex items-center justify-between">
+      <div className="absolute z-40 top-0 left-0 right-0 md:h-20 flex items-center justify-between">
         <nav className="w-full md:p-8 p-4 flex items-center justify-between">
           <div className="font-semibold uppercase md:text-xl dark:text-white text-black">
             Adeel Farzand
