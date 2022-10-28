@@ -40,11 +40,9 @@ export default function Layout({ children }) {
       y: "100px",
       ease: "power4.easeInOut",
       duration: 1,
-      delay: 0.5,
     });
     gsap.to("#outer", {
       transform: "translateY(-100vh)",
-      delay: 1.5,
       ease: "power4.easeInOut",
       duration: 1,
     });
