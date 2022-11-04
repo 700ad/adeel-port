@@ -145,9 +145,29 @@ body::before {
 }
 
 .footer-link {
-  @apply border-b mb-2 hover:bg-white/5 transition-all duration-300 cursor-pointer active:bg-white/20 focus:bg-white/10 border-white w-full text-2xl p-4;
+  @apply border-b mb-2 hover:bg-black/5 hover:dark:bg-white/5 transition-all duration-300 cursor-pointer active:bg-black/20 active:dark:bg-white/20 focus:bg-black/10 focus:dark:bg-white/10 dark:border-white border-black w-full text-2xl p-4;
 }
 
 .btn {
   @apply py-1 px-4 cursor-pointer mr-4 bg-black dark:bg-white hover:bg-white/60 hover:dark:bg-black/60 hover:dark:text-white hover:text-black transition-all duration-300 dark:text-black rounded-full uppercase text-white text-sm md:text-base;
+}
+
+.menulink {
+  transition: all 300ms ease-in;
+}
+.menulink div:hover {
+  transition: all 300ms ease-in;
+}
+
+.menulink:hover div {
+  opacity: 0.2;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 300ms ease-in;
+}
+.menulink div:hover {
+  opacity: 1;
+  transition: all 300ms ease-in;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
 }

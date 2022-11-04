@@ -101,19 +101,19 @@ const Header = () => {
           </div>
 
           <FullWidthText word1="ADEEL FARZAND" />
-          <div className="grid grid-cols-4 relative z-10 mt-4">
-            <div className="col-span-1 text-3xl pl-2 font-medium uppercase">
+          <div className="grid md:grid-cols-4 grid-cols-1 relative z-10 mt-4">
+            <div className="col-span-1 md:text-3xl text-2xl md:pl-2 font-medium uppercase">
               FULLSTACK ENGINEER & CREATIVE DEVELOPER
             </div>
             <div className="col-span-1">
-              <p className="leading-none">
+              <p className="leading-none text-sm my-4">
                 I LOVE WRITING CODE & TRAVELING. I'VE BEEN WORKING SINCE 2018.
                 DURING THIS TIME, I REALIZED THAT I LIKE TO COMBINE FUNCTIONAL
                 SOLUTIONS WITH AESTHETICS, MAKING PRODUCTS PEOPLE LOVE.
               </p>
             </div>
             <div className="col-span-1"></div>
-            <div className="bg-black text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
+            <div className="bg-black mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
               Get Free Consultation
             </div>
           </div>

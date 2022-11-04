@@ -3,12 +3,13 @@ import "./work.css";
 import FullWidthText from "./FullWidthText";
 import Sunrise from "../images/sunrise.png";
 import Sunset from "../images/sunset.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Work() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
-        <img
+        <StaticImage
           className="ukiyo fv_img1 filter dark:invert  "
           src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           // src="https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -18,10 +19,10 @@ export default function Work() {
         />
         <div className="z-10 dark:text-black text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
           <div className="w-full">
-            <FullWidthText word1={"Work"} />
+            <FullWidthText word1={"Case Studies"} />
           </div>
           <div className="flex items-start justify-end">
-            <p className="w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
+            <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse
               beatae doloremque molestias facilis quo mollitia sed quis itaque
               vel reprehenderit suscipit nesciunt, aliquid laborum quam
@@ -37,7 +38,7 @@ export default function Work() {
       <div className="p-4 md:px-8 md:py-20">
         <div className="grid grid-cols-12">
           <div className="col-span-12 relative md:col-span-4 md:col-start-2">
-            <img
+            <StaticImage
               className="ukiyo w-full h-[50vh]"
               data-u-speed="1.3"
               src="https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -170,10 +171,10 @@ export default function Work() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12 mt-20">
+        <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 relative md:col-span-7 md:col-start-5">
             <img
-              className="ukiyo w-full h-[78vh]"
+              className="ukiyo w-full md:h-[78vh] h-[50vh]"
               data-u-speed="1.7"
               src="https://www.datocms-assets.com/63595/1646059101-e1-1.png?auto=format"
             />
@@ -231,10 +232,10 @@ export default function Work() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12 mt-20">
+        <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 relative md:col-span-4 md:col-start-4">
-            <img
-              className="ukiyo w-full h-[78vh]"
+            <StaticImage
+              className="ukiyo w-full md:h-[78vh] h-[50vh]"
               data-u-speed="1.7"
               src="https://images.unsplash.com/photo-1647613049527-851295e24918?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
             />
@@ -246,9 +247,9 @@ export default function Work() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12 mt-20">
+        <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 relative md:col-span-5 md:col-start-7">
-            <img
+            <StaticImage
               className="ukiyo w-full h-[50vh]"
               data-u-speed="1.7"
               src="https://images.unsplash.com/photo-1647613049527-851295e24918?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
@@ -261,10 +262,10 @@ export default function Work() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12 mt-20">
+        <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 cursor-pointer relative md:col-span-5 md:col-start-3">
-            <img
-              className="ukiyo w-full h-[75vh]"
+          <StaticImage
+              className="ukiyo w-full md:h-[75vh] h-[50vh]"
               data-u-speed="2.1"
               data-u-scale="1.35"
               src="https://images.unsplash.com/photo-1647613049527-851295e24918?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"

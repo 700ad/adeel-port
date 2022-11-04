@@ -14,19 +14,19 @@ export default function Layout({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.008 - Math.pow(2.6, -8 * t)), // https://www.desmos.com/calculator/brs54l4xou
-      direction: "vertical", // vertical, horizontal
-      gestureDirection: "vertical", // vertical, horizontal, both
+      easing: (t) => Math.min(1, 1.008 - Math.pow(2.6, -8 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
       smooth: true,
       smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
     });
 
-    //get scroll value
-    lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-      // console.log({ scroll, limit, velocity, direction, progress });
-    });
+    lenis.on(
+      "scroll",
+      ({ scroll, limit, velocity, direction, progress }) => {}
+    );
 
     function raf(time) {
       lenis.raf(time);
@@ -35,17 +35,17 @@ export default function Layout({ children }) {
 
     requestAnimationFrame(raf);
 
-    gsap.to("#inner", {
-      height: "0px",
-      y: "100px",
-      ease: "power4.easeInOut",
-      duration: 1,
-    });
-    gsap.to("#outer", {
-      transform: "translateY(-100vh)",
-      ease: "power4.easeInOut",
-      duration: 1,
-    });
+    // gsap.to("#inner", {
+    //   height: "0px",
+    //   y: "100px",
+    //   ease: "power4.easeInOut",
+    //   duration: 1,
+    // });
+    // gsap.to("#outer", {
+    //   transform: "translateY(-100vh)",
+    //   ease: "power4.easeInOut",
+    //   duration: 1,
+    // });
 
     const images = document.querySelectorAll(".ukiyo");
     images.forEach((image) => {
@@ -57,12 +57,12 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      <div
+      {/* <div
         id="outer"
         className="w-screen h-screen bg-black fixed inset-0 z-50 flex items-center justify-center"
       >
         <div id="inner" className="w-40 h-60 bg-white"></div>
-      </div>
+      </div> */}
       <Nav />
       {children}
       <Footer />

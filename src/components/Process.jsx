@@ -1,12 +1,13 @@
 import React from "react";
 
 import FullWidthText from "./FullWidthText";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Process() {
   return (
     <div className="bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
-        <img
+        <StaticImage
           className="ukiyo fv_img1 filter dark:invert "
           src="https://images.pexels.com/photos/6444367/pexels-photo-6444367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           // src="https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -20,7 +21,7 @@ export default function Process() {
             <FullWidthText word1={"PROCESS"} />
           </div>
           <div className="flex items-start justify-end">
-            <p className="w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
+            <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse
               beatae doloremque molestias facilis quo mollitia sed quis itaque
               vel reprehenderit suscipit nesciunt, aliquid laborum quam
