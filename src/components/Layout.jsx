@@ -35,45 +35,33 @@ export default function Layout({ children }) {
 
     requestAnimationFrame(raf);
 
-    // gsap.to("#inner", {
-    //   height: "0px",
-    //   y: "100px",
-    //   ease: "power4.easeInOut",
-    //   duration: 1,
+    // gsap.to("#slider", {
+    //   width: "100%",
+    //   delay: 1.4,
+    //   ease: "circ.easeinout",
+    //   duration: 1.2,
+    //   onComplete: () => {
+    //     gsap.to("#content", {
+    //       ease: "circ.easeinout",
+    //       opacity: 0,
+    //       onComplete: () => {
+    //         gsap.to(".rects div", {
+    //           transform: "translateY(-100vh)",
+    //           stagger: 0.2,
+    //           duration: 0.8,
+    //           delay: 0.5,
+    //           ease: "circ.easeinout",
+    //           onComplete: () => {
+    //             gsap.to("#menu", {
+    //               display: "none",
+    //               duration: 0.01,
+    //             });
+    //           },
+    //         });
+    //       },
+    //     });
+    //   },
     // });
-    // gsap.to("#outer", {
-    //   transform: "translateY(-100vh)",
-    //   ease: "power4.easeInOut",
-    //   duration: 1,
-    // });
-
-    gsap.to("#slider", {
-      width: "100%",
-      delay: 1.4,
-      ease: "circ.easeinout",
-      duration: 1.2,
-      onComplete: () => {
-        gsap.to("#content", {
-          ease: "circ.easeinout",
-          opacity: 0,
-          onComplete: () => {
-            gsap.to(".rects div", {
-              transform: "translateY(-100vh)",
-              stagger: 0.2,
-              duration: 0.8,
-              delay: 0.5,
-              ease: "circ.easeinout",
-              onComplete: () => {
-                gsap.to("#menu", {
-                  display: "none",
-                  duration: 0.01,
-                });
-              },
-            });
-          },
-        });
-      },
-    });
 
     const images = document.querySelectorAll(".ukiyo");
     images.forEach((image) => {
@@ -85,7 +73,7 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      <div
+      {/* <div
         id="menu"
         className="w-screen h-screen fixed inset-0 z-50 flex items-center justify-center"
       >
@@ -106,7 +94,7 @@ export default function Layout({ children }) {
             Farzand
           </div>
         </div>
-      </div>
+      </div> */}
       <Nav />
       {children}
       <Footer />

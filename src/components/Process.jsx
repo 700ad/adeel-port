@@ -1,17 +1,14 @@
 import React from "react";
 
 import FullWidthText from "./FullWidthText";
-import { StaticImage } from "gatsby-plugin-image";
 
 export default function Process() {
   return (
     <div className="bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
-        <StaticImage
+        <img
           className="ukiyo fv_img1 filter dark:invert "
           src="https://images.pexels.com/photos/6444367/pexels-photo-6444367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          // src="https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          // src="https://images.pexels.com/photos/1819650/pexels-photo-1819650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           data-u-speed="1.7"
           data-u-willchange
           decoding="async"

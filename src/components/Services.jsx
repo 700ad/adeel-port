@@ -1,17 +1,15 @@
 import React from "react";
 
-import { StaticImage } from "gatsby-plugin-image";
 import FullWidthText from "./FullWidthText";
 
 export default function Services() {
   return (
     <div className="bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
-        <StaticImage
+        <img
+          alt=""
           className="ukiyo fv_img1 filter dark:invert  "
           src="https://images.pexels.com/photos/684441/pexels-photo-684441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          //   src="https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          // src="https://images.pexels.com/photos/1819650/pexels-photo-1819650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           data-u-speed="1.7"
           data-u-willchange
           decoding="async"
@@ -42,6 +40,7 @@ export default function Services() {
               <div className="w-full sticky transition-all duration-300  top-20 bg-gradient-to-br from-transparent to-stone-100/60 dark:to-stone-100/20 p-6">
                 <div className="w-full relative overflow-hidden aspect-square">
                   <img
+                    alt=""
                     className="w-full ukiyo h-full object-cover"
                     src="https://images.pexels.com/photos/755992/pexels-photo-755992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   />
@@ -62,7 +61,8 @@ export default function Services() {
             <div className="h-[200vh]  hover:opacity-80 transition-all duration-300 cursor-pointer">
               <div className="w-full sticky transition-all duration-300  top-20 bg-gradient-to-br from-transparent to-stone-100/60 dark:to-stone-100/20 p-6">
                 <div className="w-full relative overflow-hidden aspect-square">
-                  <StaticImage
+                  <img
+                    alt=""
                     className="w-full ukiyo h-full object-cover"
                     src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   />
@@ -82,7 +82,8 @@ export default function Services() {
             <div className="h-[150vh]  hover:opacity-80 transition-all duration-300 cursor-pointer">
               <div className="w-full sticky transition-all duration-300  top-20 bg-gradient-to-br from-transparent to-stone-100/60 dark:to-stone-100/20 p-6">
                 <div className="w-full relative overflow-hidden aspect-square">
-                  <StaticImage
+                  <img
+                    alt=""
                     className="w-full ukiyo h-full object-cover"
                     src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   />
