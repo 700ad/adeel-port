@@ -1,18 +1,14 @@
 import React from "react";
 import "./work.css";
 import FullWidthText from "./FullWidthText";
-import Sunrise from "../images/sunrise.png";
-import Sunset from "../images/sunset.png";
-import { StaticImage } from "gatsby-plugin-image";
 
 export default function Work() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
-        <StaticImage
+        <img
           className="ukiyo fv_img1 filter dark:invert  "
           src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          // src="https://images.pexels.com/photos/5086477/pexels-photo-5086477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           data-u-speed="1.7"
           data-u-willchange
           decoding="async"
@@ -38,7 +34,7 @@ export default function Work() {
       <div className="p-4 md:px-8 md:py-20">
         <div className="grid grid-cols-12">
           <div className="col-span-12 relative md:col-span-4 md:col-start-2">
-            <StaticImage
+            <img
               className="ukiyo w-full h-[50vh]"
               data-u-speed="1.3"
               src="https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -234,7 +230,7 @@ export default function Work() {
         </div>
         <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 relative md:col-span-4 md:col-start-4">
-            <StaticImage
+            <img
               className="ukiyo w-full md:h-[78vh] h-[50vh]"
               data-u-speed="1.7"
               src="https://images.unsplash.com/photo-1647613049527-851295e24918?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
@@ -249,7 +245,7 @@ export default function Work() {
         </div>
         <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 relative md:col-span-5 md:col-start-7">
-            <StaticImage
+            <img
               className="ukiyo w-full h-[50vh]"
               data-u-speed="1.7"
               src="https://images.unsplash.com/photo-1647613049527-851295e24918?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
@@ -264,7 +260,7 @@ export default function Work() {
         </div>
         <div className="grid grid-cols-12 md:mt-20 mt-4">
           <div className="col-span-12 cursor-pointer relative md:col-span-5 md:col-start-3">
-          <StaticImage
+            <img
               className="ukiyo w-full md:h-[75vh] h-[50vh]"
               data-u-speed="2.1"
               data-u-scale="1.35"
