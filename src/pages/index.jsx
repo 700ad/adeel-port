@@ -27,18 +27,12 @@ const useIntersectionObserver = (ref, options) => {
 };
 
 const IndexPage = () => {
-  // const workRef = useRef();
-  // const workOnScreen = useIntersectionObserver(workRef, { threshold: 0.5 });
-  // const servicesRef = useRef();
-  // const servicesOnScreen = useIntersectionObserver(servicesRef, {
-  //   threshold: 0.1,
-  // });
-
   return (
     <>
       <Hero />
       <Work />
       <Services />
+      {/* <Cta /> */}
       <Process />
     </>
   );
