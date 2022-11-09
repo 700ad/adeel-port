@@ -36,12 +36,10 @@ const IndexPage = () => {
 
   return (
     <>
-      <Layout>
-        <Hero />
-        <Work />
-        <Services />
-        <Process />
-      </Layout>
+      <Hero />
+      <Work />
+      <Services />
+      <Process />
     </>
   );
 };

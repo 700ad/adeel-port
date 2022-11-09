@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./work.css";
 import FullWidthText from "./FullWidthText";
 import credoLogo from "../images/projects/credo-logo.svg";
@@ -6,6 +6,8 @@ import theoremLogo from "../images/projects/theorem-logo.svg";
 import escapeLogo from "../images/projects/escape-logo.svg";
 import facesLogo from "../images/projects/face-logo.svg";
 import wolionLogo from "../images/projects/wolion-logo.svg";
+
+import gsap from "gsap/dist/gsap";
 
 const projectList = [
   {
@@ -80,7 +82,10 @@ export default function Work() {
         </div>
       </section>
       {projectList.map((project, ind) => (
-        <div key={ind} className="sticky top-0 h-screen grid grid-cols-2 gap-8">
+        <div
+          key={ind}
+          className="sticky top-0 el h-screen grid grid-cols-2 gap-8"
+        >
           <div className="col-span-1 relative">
             <img
               className="ukiyo w-full h-full object-cover"
@@ -92,85 +97,10 @@ export default function Work() {
             </div>
           </div>
           <div className="col-span-1 p-4 md:p-8">
-            <div className="uppercase">{project.title}</div>
+            <div className="uppercase ptitle text-7xl">{project.title}</div>
           </div>
         </div>
       ))}
-      {/* <div className="sticky top-0 h-screen grid grid-cols-2 gap-8">
-        <div className="col-span-1">
-          <img
-            className="ukiyo w-full h-full object-cover"
-            data-u-speed="1.3"
-            src="https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
-        </div>
-        <div className="col-span-1 p-4 md:p-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          doloremque numquam eos nostrum labore ratione tempore soluta vel,
-          voluptates dolore, saepe natus. Iste velit sint mollitia, numquam eius
-          quos placeat.
-        </div>
-      </div>
-      <div className="sticky top-0 h-screen grid grid-cols-2 gap-8">
-        <div className="col-span-1">
-          <img
-            className="ukiyo w-full h-full object-cover"
-            data-u-speed="1.3"
-            src="https://www.datocms-assets.com/63595/1646059101-e1-1.png?auto=format"
-          />
-        </div>
-        <div className="col-span-1 p-4 md:p-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          doloremque numquam eos nostrum labore ratione tempore soluta vel,
-          voluptates dolore, saepe natus. Iste velit sint mollitia, numquam eius
-          quos placeat.
-        </div>
-      </div>
-      <div className="sticky top-0 h-screen grid grid-cols-2 gap-8">
-        <div className="col-span-1">
-          <img
-            className="ukiyo w-full h-full object-cover"
-            data-u-speed="1.3"
-            src="https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
-        </div>
-        <div className="col-span-1 p-4 md:p-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          doloremque numquam eos nostrum labore ratione tempore soluta vel,
-          voluptates dolore, saepe natus. Iste velit sint mollitia, numquam eius
-          quos placeat.
-        </div>
-      </div>
-      <div className="sticky top-0 h-screen grid grid-cols-2 gap-8">
-        <div className="col-span-1">
-          <img
-            className="ukiyo w-full h-full object-cover"
-            data-u-speed="1.3"
-            src="https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
-        </div>
-        <div className="col-span-1 p-4 md:p-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          doloremque numquam eos nostrum labore ratione tempore soluta vel,
-          voluptates dolore, saepe natus. Iste velit sint mollitia, numquam eius
-          quos placeat.
-        </div>
-      </div>
-      <div className="sticky top-0 h-screen grid grid-cols-2 gap-8">
-        <div className="col-span-1">
-          <img
-            className="ukiyo w-full h-full object-cover"
-            data-u-speed="1.3"
-            src="https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
-        </div>
-        <div className="col-span-1 p-4 md:p-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          doloremque numquam eos nostrum labore ratione tempore soluta vel,
-          voluptates dolore, saepe natus. Iste velit sint mollitia, numquam eius
-          quos placeat.
-        </div>
-      </div> */}
     </div>
   );
 }

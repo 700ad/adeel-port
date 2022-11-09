@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import gsap from "gsap/dist/gsap";
 
 import ThemeToggle from "./themeToggle";
-import { useState } from "react";
+
+import { Link, navigate } from "gatsby";
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -11,13 +12,9 @@ const Nav = () => {
   const [hovering, setHovering] = useState(0);
 
   const showMenu = () => {
-    // if (menu) {
-    //   return;
-    // }
-    setMenu(true);
+    // setMenu(true);
     gsap.to(".fix-header", {
       transform: "translateY(0px)",
-      duration: 0.01,
       onComplete: () => {
         gsap.to(".rects div", {
           transform: "translateY(0px)",
@@ -57,7 +54,30 @@ const Nav = () => {
       },
     });
   };
-  useEffect(() => {}, []);
+  const navigateTo = (route) => {
+    gsap.to(".nav-item", {
+      opacity: 0,
+      stagger: 0.15,
+      transform: "translateY(1rem)",
+      onComplete: () => {
+        navigate(route);
+        gsap.to(".rects div", {
+          transform: "translateY(-100vh)",
+          stagger: 0.2,
+          duration: 0.8,
+          delay: 0.5,
+          ease: "circ.easeinout",
+          onComplete: () => {
+            gsap.to(".fix-header", {
+              transform: "translateY(-100vh)",
+              duration: 0.01,
+            });
+          },
+        });
+      },
+    });
+  };
+
   return (
     <>
       <div className="absolute z-40 top-0 left-0 right-0 md:h-20 flex items-center justify-between">
@@ -93,9 +113,6 @@ const Nav = () => {
             Adeel Farzand
           </div>
           <div className="flex items-center justify-end">
-            <div className="nav-item opacity-0 translate-y-4">
-              <ThemeToggle />
-            </div>
             <div
               onClick={() => hideMenu()}
               className="h-10 py-1 w-12 nav-item opacity-0 hover:bg-white/10 dark:hover:bg-black/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
@@ -109,22 +126,26 @@ const Nav = () => {
           <div className="grid grid-cols-2 gap-8">
             <div className="text-white dark:text-black menulink flex flex-col items-start justify-between">
               <div
+                onMouseEnter={() => setHovering(2)}
+                onMouseLeave={() => setHovering(0)}
+                onClick={() => navigateTo("/")}
+                className="text-9xl nav-item opacity-0 cursor-pointer my-2"
+              >
+                Home
+              </div>
+              <div
                 onMouseEnter={() => setHovering(1)}
                 onMouseLeave={() => setHovering(0)}
+                onClick={() => navigateTo("/case-studies")}
                 className="text-9xl nav-item opacity-0 cursor-pointer my-2"
               >
                 Case Studies
               </div>
-              <div
-                onMouseEnter={() => setHovering(2)}
-                onMouseLeave={() => setHovering(0)}
-                className="text-9xl nav-item opacity-0 cursor-pointer my-2"
-              >
-                Services
-              </div>
+
               <div
                 onMouseEnter={() => setHovering(3)}
                 onMouseLeave={() => setHovering(0)}
+                onClick={() => navigateTo("/about")}
                 className="text-9xl nav-item opacity-0 cursor-pointer my-2"
               >
                 About
@@ -132,6 +153,7 @@ const Nav = () => {
               <div
                 onMouseEnter={() => setHovering(4)}
                 onMouseLeave={() => setHovering(0)}
+                onClick={() => navigateTo("/contact")}
                 className="text-9xl nav-item opacity-0 cursor-pointer my-2"
               >
                 Contact

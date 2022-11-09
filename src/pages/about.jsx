@@ -9,6 +9,9 @@ import sunsi from "../images/sunset.png";
 import sunrise from "../images/adeel.jpeg";
 import sunset from "../images/adeel2.jpeg";
 import noise3Img from "../images/noisr3.jpeg";
+import noise1Img from "../images/noise1.jpeg";
+import noise2Img from "../images/noise2.jpeg";
+import noiseImg from "../images/noise.jpeg";
 
 export const ImageFadeMaterial = shaderMaterial(
   {
@@ -126,9 +129,7 @@ const Header = () => {
 export default function About() {
   return (
     <>
-      <Layout>
-        <Header />
-      </Layout>
+      <Header />
     </>
   );
 }

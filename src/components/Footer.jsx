@@ -1,81 +1,8 @@
 import React from "react";
-
-import { Vector3 } from "three";
-import { useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useGLTF, SpotLight, useDepthBuffer } from "@react-three/drei";
 import { Link } from "gatsby";
 
-import gsap from "gsap/dist/gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-
-import FullWidthText from "../components/FullWidthText";
-import { useEffect } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
-
-function Scene() {
-  const depthBuffer = useDepthBuffer({ frames: 1 });
-  const { nodes, materials } = useGLTF(
-    "https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/dragon/model.gltf"
-  );
-
-  return (
-    <>
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color="#dcb697"
-        position={[3, 3, 2]}
-      />
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color="#fc7001"
-        position={[-3, 3, 3]}
-      />
-      <mesh
-        position={[0, -1.03, 0]}
-        castShadow
-        receiveShadow
-        geometry={nodes.dragon.geometry}
-        material={materials["Default OBJ.001"]}
-        dispose={null}
-      />
-      <mesh receiveShadow position={[0, -1, 0]} rotation-x={-Math.PI / 2}>
-        <planeGeometry args={[50, 50]} />
-        <meshPhongMaterial />
-      </mesh>
-    </>
-  );
-}
-
-function MovingSpot({ vec = new Vector3(), ...props }) {
-  const light = useRef();
-  const viewport = useThree((state) => state.viewport);
-  useFrame((state) => {
-    light.current.target.position.lerp(
-      vec.set(
-        (state.mouse.x * viewport.width) / 2,
-        (state.mouse.y * viewport.height) / 2,
-        0
-      ),
-      0.1
-    );
-    light.current.target.updateMatrixWorld();
-  });
-  return (
-    <SpotLight
-      castShadow
-      ref={light}
-      penumbra={1}
-      distance={6}
-      angle={0.35}
-      attenuation={5}
-      anglePower={4}
-      intensity={2}
-      {...props}
-    />
-  );
-}
+import Dragon from "../components/Dragon";
+import World from "../components/World";
 
 const Footer = () => {
   const copyContent = async (text) => {
@@ -87,57 +14,35 @@ const Footer = () => {
     }
   };
 
-  useEffect(() => {
-    gsap.to(".name div", {
-      scrollTrigger: {
-        trigger: "#fname",
-        scrub: true,
-      },
-      opacity: 1,
-      transform: "translateY(0px)",
-      stagger: 0.09,
-      ease: "power4.easein",
-    });
-  }, []);
-
   return (
     <div>
       <footer className="footer text-white">
         <div className="footer__inner">
           <div className="relative h-screen text-orange-50">
-            <Canvas
-              className="h-screen absolute"
-              shadows
-              dpr={[1, 2]}
-              camera={{ position: [-2, 2, 6], fov: 50, near: 1, far: 20 }}
-            >
-              <color attach="background" args={["#202020"]} />
-              <fog attach="fog" args={["#202020", 5, 20]} />
-              <ambientLight intensity={0.015} />
-              <Scene />
-            </Canvas>
+            <Dragon />
+            {/* <World /> */}
             <div className="absolute top-0 left-0 text-white p-4 md:p-8">
               <div
                 id="fname"
                 className="name text-[4vw] flex p-2 border border-white/5 rounded-xl backdrop-blur-3xl leading-none"
               >
-                <div className=" opacity-0 translate-y-1">A</div>
-                <div className=" opacity-0 translate-y-2">D</div>
-                <div className=" opacity-0 translate-y-3">E</div>
-                <div className=" opacity-0 translate-y-4">E</div>
-                <div className=" opacity-0 translate-y-5">L</div>
+                <div className="">A</div>
+                <div className="">D</div>
+                <div className="">E</div>
+                <div className="">E</div>
+                <div className="">L</div>
               </div>
               <div
                 id="lname"
                 className="name text-[4vw] flex p-2 border border-white/5 rounded-xl backdrop-blur-3xl leading-none"
               >
-                <div className=" opacity-0 translate-y-3">F</div>
-                <div className=" opacity-0 translate-y-4">A</div>
-                <div className=" opacity-0 translate-y-5">R</div>
-                <div className=" opacity-0 translate-y-6">Z</div>
-                <div className=" opacity-0 translate-y-7">A</div>
-                <div className=" opacity-0 translate-y-8">N</div>
-                <div className=" opacity-0 translate-y-8">D</div>
+                <div className="">F</div>
+                <div className="">A</div>
+                <div className="">R</div>
+                <div className="">Z</div>
+                <div className="">A</div>
+                <div className="">N</div>
+                <div className="">D</div>
               </div>
             </div>
             <div className="absolute bottom-8  left-8 text-white flex flex-col items-center justify-end">
@@ -236,45 +141,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-<footer className="w-full h-screen relative bg-black">
-  <div className="absolute bottom-8  left-8 right-8 text-white flex flex-col items-center justify-end">
-    <div className="hidden md:ex flex-col items-center justify-center">
-      <h4 className="text-[10vh] max-w-4xl text-center leading-none font-thin text-white">
-        Let's talk about the next big thing
-      </h4>
-      <button className="p-4 px-8 my-20 rounded-full bg-white/90 hover:bg-white/10 transition-all duration-300 text-black hover:text-white">
-        Contact Us
-      </button>
-    </div>
-    <div className="absolute top-0 left-0 w-80 border border-white">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, hic. Sed
-      maiores debitis illo, laudantium modi quasi, veniam excepturi perferendis
-      sunt explicabo dolorum tempore omnis culpa quae itaque error repellat.
-    </div>
-    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 mb-4">
-      <div className="flex flex-col">
-        <div className="text-sm mb-4">Based in</div>
-        <div className="text-xl uppercase p-1">Lahore, PK</div>
-      </div>
-      <div className="flex flex-col">
-        <div className="text-sm mb-4">Social</div>
-        <div className="text-xl uppercase mb-1 cursor-pointer p-1">
-          LinkedIn
-        </div>
-        <div className="text-xl uppercase cursor-pointer p-1">Instagram</div>
-      </div>
-      <div className="flex flex-col">
-        <div className="text-sm mb-4">Contact</div>
-        <div className="copy-link mb-1 active:bg-white/60">Email</div>
-        <div className="copy-link active:bg-white/60">Phone</div>
-      </div>
-      <div className="flex flex-col">
-        <div className="text-sm mb-4">&nbsp;</div>
-        <div className="text-xl uppercase p-1">Adeel &copy;</div>
-        <div className="text-xl uppercase p-1">Farzand</div>
-      </div>
-    </div>
-    <hr className="border-b w-full border-white" />
-  </div>
-</footer>;
