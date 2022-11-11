@@ -84,11 +84,11 @@ export default function Work() {
       {projectList.map((project, ind) => (
         <div
           key={ind}
-          className="sticky top-0 el h-screen grid grid-cols-2 gap-8"
+          className="sticky top-0 el h-screen grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <div className="col-span-1 relative">
             <img
-              className="ukiyo w-full h-full object-cover"
+              className="ukiyo w-full h-[60vh] md:h-full object-cover"
               data-u-speed="1.3"
               src={project.bg}
             />
@@ -97,7 +97,7 @@ export default function Work() {
             </div>
           </div>
           <div className="col-span-1 p-4 md:p-8">
-            <div className="uppercase ptitle text-7xl">{project.title}</div>
+            <div className="uppercase ptitle text-4xl md:text-7xl">{project.title}</div>
           </div>
         </div>
       ))}

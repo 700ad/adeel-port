@@ -104,7 +104,7 @@ export default function Layout({ children }) {
             <div className="h-1/5 bg-gradient-to-b  from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 w-0"></div>
             <div className="h-1/5 bg-gradient-to-b  from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-500 w-0"></div>
           </div>
-          <div className="filter  textitem text-black dark:text-white invert text-[20vh] font-bold leading-none uppercase">
+          <div className="filter textitem text-black dark:text-white invert text-[20vw] md:text-[20vh] font-bold leading-none uppercase">
             Adeel &copy; <br />
             Farzand
           </div>
