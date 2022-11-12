@@ -56,12 +56,12 @@ export default function Layout({ children }) {
                   transform: "translateY(-100vh)",
                   stagger: 0.2,
                   duration: 0.8,
-                  delay: 0.5,
                   ease: "expo.inout",
-                  onComplete: () => {
+                  onStart: () => {
                     gsap.to("#menu", {
+                      delay: 1.8,
                       display: "none",
-                      duration: 0.01,
+                      duration: 0,
                     });
                   },
                 });
@@ -105,7 +105,8 @@ export default function Layout({ children }) {
             <div className="h-1/5 bg-gradient-to-b  from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-500 w-0"></div>
           </div>
           <div className="filter textitem text-black dark:text-white invert text-[20vw] md:text-[20vh] font-bold leading-none uppercase">
-            Adeel &copy; <br />
+            Adeel &copy;
+            <br />
             Farzand
           </div>
         </div>

@@ -26,23 +26,17 @@ const Footer = () => {
                 id="fname"
                 className="name text-[4vw] flex p-2 border border-white/5 rounded-xl backdrop-blur-3xl leading-none"
               >
-                <div className="">A</div>
-                <div className="">D</div>
-                <div className="">E</div>
-                <div className="">E</div>
-                <div className="">L</div>
+                ADEEL
+                <br />
+                FARZAND
               </div>
-              <div
-                id="lname"
-                className="name text-[4vw] flex p-2 border border-white/5 rounded-xl backdrop-blur-3xl leading-none"
-              >
-                <div className="">F</div>
-                <div className="">A</div>
-                <div className="">R</div>
-                <div className="">Z</div>
-                <div className="">A</div>
-                <div className="">N</div>
-                <div className="">D</div>
+            </div>
+            <div className="absolute top-0 right-0 text-white p-4 md:p-8">
+              <div className="text-[2vw] uppercase leading-none">
+                Get Free Consultation
+              </div>
+              <div className="bg-black mt-2 py-2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
+                Book Now
               </div>
             </div>
             <div className="absolute bottom-8  left-8 text-white flex flex-col items-center justify-end">

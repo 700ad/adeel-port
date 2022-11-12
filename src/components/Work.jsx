@@ -84,20 +84,22 @@ export default function Work() {
       {projectList.map((project, ind) => (
         <div
           key={ind}
-          className="sticky top-0 el h-screen grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="sticky top-0 p-32 el h-screen grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          <div className="col-span-1 relative">
+          <div className="col-span-1 relative overflow-hidden">
             <img
               className="ukiyo w-full h-[60vh] md:h-full object-cover"
               data-u-speed="1.3"
               src={project.bg}
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img src={project.logo} className=" w-56 object-cover" />
+            <div className="absolute inset-0 flex items-start pt-[40%] justify-center ">
+              <img src={project.logo} className=" w-40 " />
             </div>
           </div>
-          <div className="col-span-1 p-4 md:p-8">
-            <div className="uppercase ptitle text-4xl md:text-7xl">{project.title}</div>
+          <div className="col-span-1 bg-white p-4 md:p-8">
+            <div className="uppercase ptitle text-4xl md:text-7xl">
+              {project.title}
+            </div>
           </div>
         </div>
       ))}

@@ -12,15 +12,15 @@ const Nav = () => {
   const [hovering, setHovering] = useState(0);
 
   const showMenu = () => {
-    // setMenu(true);
     gsap.to(".fix-header", {
-      transform: "translateY(0px)",
-      onComplete: () => {
+      display: "flex",
+      duration: 0.1,
+      onStart: () => {
         gsap.to(".rects div", {
-          transform: "translateY(0px)",
+          transform: "translateY(0)",
           stagger: 0.2,
           duration: 0.8,
-          ease: "circ.easeinout",
+          ease: "expo.inout",
           onComplete: () => {
             gsap.to(".nav-item", {
               opacity: 1,
@@ -46,8 +46,8 @@ const Nav = () => {
           ease: "circ.easeinout",
           onComplete: () => {
             gsap.to(".fix-header", {
-              transform: "translateY(-100vh)",
-              duration: 0.01,
+              display: "none",
+              duration: 0,
             });
           },
         });
@@ -99,7 +99,7 @@ const Nav = () => {
         </nav>
       </div>
 
-      <div className="w-screen h-screen fix-header translate-y-[-100vh] fixed inset-0 z-50">
+      <div className="w-screen h-screen fix-header hidden fixed inset-0 z-50">
         <div className="absolute rects inset-0 flex">
           <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
           <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
