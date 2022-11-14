@@ -34,16 +34,16 @@ export default function Layout({ children }) {
     requestAnimationFrame(raf);
     gsap.to("#slider div", {
       width: "100%",
-      stagger: 0.15,
+      stagger: 0.1,
       duration: 0.8,
       ease: "expo.inout",
       onComplete: () => {
         gsap.to(".textitem", {
           opacity: 0,
+          duration: 0,
           onComplete: () => {
             gsap.to("#slider div", {
               width: "0%",
-              delay: 1,
               stagger: 0.15,
               duration: 0.8,
               ease: "expo.inout",
