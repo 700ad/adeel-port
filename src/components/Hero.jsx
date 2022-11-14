@@ -12,17 +12,17 @@ export default function Hero() {
       transform: "translateY(0px)",
       opacity: 1,
       stagger: 0.2,
-      delay: 6.8,
+      delay: 4,
     });
-    // gsap.to("#ball", {
-    //   scrollTrigger: {
-    //     trigger: "#cont",
-    //     start: "top top",
-    //     end: "bottom top",
-    //     scrub: 1,
-    //   },
-    //   rotate: 360,
-    // });
+    gsap.to("#ball", {
+      scrollTrigger: {
+        trigger: "#cont",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+      },
+      rotate: 360,
+    });
   }, []);
   return (
     <>

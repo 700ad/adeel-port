@@ -44,6 +44,7 @@ export default function Layout({ children }) {
           onComplete: () => {
             gsap.to("#slider div", {
               width: "0%",
+              delay: 0.25,
               stagger: 0.15,
               duration: 0.8,
               ease: "expo.inout",
