@@ -267,3 +267,25 @@ body::before {
     transform: rotate(-360deg);
   }
 }
+
+.h1 {
+  margin: 0;
+  font-size: 200px;
+  overflow: hidden;
+  line-height: 1;
+}
+.h1 span {
+  display: block;
+  animation: h1reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 2.5s;
+}
+
+@keyframes h1reveal {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

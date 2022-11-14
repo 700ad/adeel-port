@@ -43,12 +43,14 @@ export default function FullWidthText({ word1, word2 }) {
 
   return (
     <div className="scale__container--js">
-      <h2
-        className={`scale--js leading-none text-left font-medium`}
-      >
-        {word1}
+      <h2 className={`scale--js  leading-none text-left font-medium`}>
+        <div className="h1">
+          <span>{word1}</span>
+        </div>
         <br />
-        {word2}
+        <div className="h1">
+          <span>{word2}</span>
+        </div>
       </h2>
     </div>
   );

@@ -35,9 +35,9 @@ const Footer = () => {
               <div className="text-[2vw] uppercase leading-none">
                 Get Free Consultation
               </div>
-              <div className="bg-black mt-2 py-2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
+              <button className="bg-black mt-2 py-2 wful text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 w-full transition-all duration-300">
                 Book Now
-              </div>
+              </button>
             </div>
             <div className="absolute bottom-8  left-8 text-white flex flex-col items-center justify-end">
               <div className="flex flex-col p-2 border border-white/5 rounded-xl backdrop-blur-3xl">

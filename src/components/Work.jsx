@@ -14,7 +14,7 @@ const projectList = [
     title: "Theorem Studio",
     logo: theoremLogo,
     bg: "https://images.pexels.com/photos/2156883/pexels-photo-2156883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    services: [],
+    services: ["WEB DESIGN", "WEB DEVELOPMENT"],
     detail: "",
     speed: 0.5,
   },
@@ -22,7 +22,7 @@ const projectList = [
     title: "Escape Hotel",
     logo: escapeLogo,
     bg: "https://www.datocms-assets.com/63595/1646059101-e1-1.png?auto=format",
-    services: [],
+    services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
   },
@@ -30,7 +30,7 @@ const projectList = [
     title: "Credo",
     logo: credoLogo,
     bg: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    services: [],
+    services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
   },
@@ -38,7 +38,7 @@ const projectList = [
     title: "theFaces",
     logo: facesLogo,
     bg: "https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    services: [],
+    services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
   },
@@ -46,7 +46,7 @@ const projectList = [
     title: "Wolion Studio",
     logo: wolionLogo,
     bg: "https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    services: [],
+    services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
   },
@@ -84,7 +84,7 @@ export default function Work() {
       {projectList.map((project, ind) => (
         <div
           key={ind}
-          className="sticky top-0 p-32 el h-screen grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="sticky top-0 p-32 el h-screen grid grid-cols-1 md:grid-cols-2"
         >
           <div className="col-span-1 relative overflow-hidden">
             <img
@@ -96,9 +96,24 @@ export default function Work() {
               <img src={project.logo} className=" w-40 " />
             </div>
           </div>
-          <div className="col-span-1 bg-white p-4 md:p-8">
-            <div className="uppercase ptitle text-4xl md:text-7xl">
-              {project.title}
+          <div className="col-span-1 bg-white px-4 md:px-8 md:pt-8">
+            <div className="uppercase flex flex-col h-full items-start justify-between">
+              <div className="flex flex-col">
+                <h3 className="text-4xl  md:text-7xl">{project.title}</h3>
+                <div className="pt-8 flex">
+                  {project.services.map((service, ind) => (
+                    <p
+                      className="px-2 text-xl border mr-8 rounded-md border-black w-fit"
+                      key={ind}
+                    >
+                      {service}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <button className="bg-black mt-2 py-2 w-1/2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
+                Book Now
+              </button>
             </div>
           </div>
         </div>

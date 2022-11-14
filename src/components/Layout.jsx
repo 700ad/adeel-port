@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import NewNav from "./NewNav";
 import Lenis from "@studio-freight/lenis";
 
 import gsap from "gsap/dist/gsap";
@@ -22,22 +23,17 @@ export default function Layout({ children }) {
       touchMultiplier: 2,
       infinite: false,
     });
-
     lenis.on(
       "scroll",
       ({ scroll, limit, velocity, direction, progress }) => {}
     );
-
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-
     gsap.to("#slider div", {
       width: "100%",
-      delay: 1,
       stagger: 0.15,
       duration: 0.8,
       ease: "expo.inout",
@@ -71,7 +67,6 @@ export default function Layout({ children }) {
         });
       },
     });
-
     const images = document.querySelectorAll(".ukiyo");
     images.forEach((image) => {
       new Ukiyo(image, {
@@ -111,7 +106,7 @@ export default function Layout({ children }) {
           </div>
         </div>
       </div>
-      <Nav />
+      <NewNav />
       {children}
       <Footer />
     </>
