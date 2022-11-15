@@ -4,6 +4,7 @@ import gsap from "gsap/dist/gsap";
 
 import ThemeToggle from "./themeToggle";
 import { useEffect } from "react";
+import { Link, navigate } from "gatsby";
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -55,6 +56,27 @@ const Nav = () => {
       });
   };
 
+  const navigateTo = (route) => {
+    const tl = gsap.timeline();
+    tl.to(".nitem", {
+      opacity: 0,
+      stagger: 0.15,
+      transform: "translateY(1rem)",
+      onComplete: () => navigate(route),
+    });
+    tl.to(".rects div", {
+      transform: "translateY(-100vh)",
+      stagger: 0.2,
+      duration: 0.8,
+      onComplete: () => {
+        tl.to("#fchanger", {
+          duration: 0,
+          display: "none",
+        });
+      },
+    });
+  };
+
   useEffect(() => {}, []);
 
   return (
@@ -92,26 +114,38 @@ const Nav = () => {
           <div className="flex nitem opacity-0 translate-y-3 items-center justify-end">
             <div
               onClick={() => animOut()}
-              className="h-10 py-1 w-12 hover:bg-black/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
+              className="h-10 py-1 w-12 hover:bg-white/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
             >
-              <div className="w-8 border border-white dark:border-black "></div>
-              <div className="w-8 border border-white dark:border-black"></div>
-              <div className="w-8 border border-white dark:border-black"></div>
+              <div className="w-8 border border-white "></div>
+              <div className="w-8 border border-white"></div>
+              <div className="w-8 border border-white"></div>
             </div>
           </div>
         </div>
         <div className=" absolute top-14 w-screen grid grid-cols-2 p-8">
           <div className="col-span-1 h-40 text-white flex flex-col">
-            <div className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer">
+            <div
+              onClick={() => navigateTo("/")}
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+            >
               HOME
             </div>
-            <div className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer">
+            <div
+              onClick={() => navigateTo("/case-studies")}
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+            >
               CASE STUDIES
             </div>
-            <div className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer">
+            <div
+              onClick={() => navigateTo("/about")}
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+            >
               ABOUT
             </div>
-            <div className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer">
+            <div
+              onClick={() => navigateTo("/contact")}
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+            >
               CONTACT
             </div>
           </div>
