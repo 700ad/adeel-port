@@ -96,14 +96,16 @@ export default function Work() {
               <img src={project.logo} className=" w-40 " />
             </div>
           </div>
-          <div className="col-span-1 bg-white px-4 md:px-8 md:pt-8">
+          <div className="col-span-1 bg-white dark:bg-black px-4 md:px-8 md:pt-8">
             <div className="uppercase flex flex-col h-full items-start justify-between">
               <div className="flex flex-col">
-                <h3 className="text-4xl  md:text-7xl">{project.title}</h3>
+                <h3 className="text-4xl text-black dark:text-white md:text-7xl">
+                  {project.title}
+                </h3>
                 <div className="pt-8 flex">
                   {project.services.map((service, ind) => (
                     <p
-                      className="px-2 text-xl border mr-8 rounded-md border-black w-fit"
+                      className="px-2 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit"
                       key={ind}
                     >
                       {service}
@@ -112,7 +114,7 @@ export default function Work() {
                 </div>
               </div>
               <button className="bg-black mt-2 py-2 w-1/2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
-                Book Now
+                View Project
               </button>
             </div>
           </div>

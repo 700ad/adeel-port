@@ -83,6 +83,8 @@ const Footer = () => {
                 </div>
                 <div
                   onClick={() => copyContent("hello@adeelfarzand.com")}
+                  // href="mailto:hello@adeelfarzand.com"
+                  // target="_blank"
                   className="copy-link uppercase p-1 w-full flex items-center justify-between"
                 >
                   <span>Email</span>

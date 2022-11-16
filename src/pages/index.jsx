@@ -32,7 +32,6 @@ const IndexPage = () => {
       <Hero />
       <Work />
       <Services />
-      {/* <Cta /> */}
       <Process />
     </>
   );

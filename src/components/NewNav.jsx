@@ -14,7 +14,6 @@ const Nav = () => {
     gsap
       .timeline({
         defaults: {
-          duration: 1,
           ease: "circ.inout",
         },
       })
@@ -26,11 +25,14 @@ const Nav = () => {
         transform: "translateY(0px)",
         stagger: 0.2,
       })
-      .to(".nitem", {
-        opacity: 1,
-        stagger: 0.1,
-        transform: "translateY(0px)",
-      });
+      .to(
+        ".nitem",
+        {
+          opacity: 1,
+          stagger: 0.1,
+        }
+        // "-=1"
+      );
   };
 
   const animOut = () => {
@@ -107,11 +109,11 @@ const Nav = () => {
         <div className="w-1/5 h-screen translate-y-[-100vh] bg-black"></div>
         <div className="w-1/5 h-screen translate-y-[-100vh] bg-black"></div>
         <div className="absolute z-40 top-0 left-0 right-0 p-8 flex items-center justify-between">
-          <div className="font-semibold nitem translate-y-4 opacity-0 absolute  uppercase md:text-xl dark:text-black text-white">
+          <div className="font-semibold nitem opacity-0 absolute  uppercase md:text-xl text-white">
             Adeel Farzand
           </div>
           <div></div>
-          <div className="flex nitem opacity-0 translate-y-3 items-center justify-end">
+          <div className="flex nitem opacity-0 items-center justify-end">
             <div
               onClick={() => animOut()}
               className="h-10 py-1 w-12 hover:bg-white/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
@@ -126,25 +128,25 @@ const Nav = () => {
           <div className="col-span-1 h-40 text-white flex flex-col">
             <div
               onClick={() => navigateTo("/")}
-              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 nitem leading-none cursor-pointer"
             >
               HOME
             </div>
             <div
               onClick={() => navigateTo("/case-studies")}
-              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 nitem leading-none cursor-pointer"
             >
               CASE STUDIES
             </div>
             <div
               onClick={() => navigateTo("/about")}
-              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 nitem leading-none cursor-pointer"
             >
               ABOUT
             </div>
             <div
               onClick={() => navigateTo("/contact")}
-              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 translate-y-3 nitem leading-none cursor-pointer"
+              className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 nitem leading-none cursor-pointer"
             >
               CONTACT
             </div>

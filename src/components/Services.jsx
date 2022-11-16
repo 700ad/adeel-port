@@ -35,7 +35,7 @@ export default function Services() {
         </div>
       </section>
       <div className="py-20">
-        <div className="marqueeFull uppercase border-b border-brand-100 text-brand-100">
+        <div className="marqueeFull  text-black dark:text-white uppercase text-brand-100">
           <div className="trackFull">
             <div className="content flex items-center">
               NEXTJS
@@ -58,7 +58,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="marqueeFullR uppercase border-b border-brand-100 text-brand-100">
+        <div className="marqueeFullR  text-black dark:text-white uppercase  text-brand-100">
           <div className="trackFullR">
             <div className="content flex items-center">
               NEXTJS
@@ -93,7 +93,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="marqueeFull uppercase border-b border-brand-100 text-brand-100">
+        <div className="marqueeFull text-black dark:text-white uppercase text-brand-100">
           <div className="trackFull">
             <div className="content flex items-center">
               NEXTJS
