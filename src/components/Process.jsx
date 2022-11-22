@@ -1,6 +1,6 @@
 import React from "react";
 
-import FullWidthText from "./FullWidthText";
+import FullStaticText from "./FullStaticText";
 
 export default function Process() {
   return (
@@ -15,7 +15,7 @@ export default function Process() {
         />
         <div className="z-10 dark:text-black  text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
           <div className="w-full">
-            <FullWidthText word1={"PROCESS"} />
+            <FullStaticText word1={"PROCESS"} />
           </div>
           <div className="flex items-start justify-end">
             <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">

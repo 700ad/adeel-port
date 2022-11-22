@@ -110,7 +110,7 @@ const Header = () => {
             </div>
             <div className="col-span-1">
               <p className="leading-none text-sm my-4">
-                I LOVE WRITING CODE & TRAVELING. I'VE BEEN WORKING SINCE 2018.
+                I LOVE WRITING CODE & TRAVELING. I'VE BEEN WORKING SINCE 2019.
                 DURING THIS TIME, I REALIZED THAT I LIKE TO COMBINE FUNCTIONAL
                 SOLUTIONS WITH AESTHETICS, MAKING PRODUCTS PEOPLE LOVE.
               </p>

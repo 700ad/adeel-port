@@ -1,8 +1,108 @@
 import React from "react";
 
-import FullWidthText from "./FullWidthText";
+import FullStaticText from "./FullStaticText";
 
 import flower from "../images/Group 1.svg";
+// import flowerWhite from "../images/flower-white.svg";
+
+const Flower = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      className="w-full h-full rot object-cover dark:stroke-white stroke-black"
+    >
+      <g transform="translate(-337.5 -10)">
+        <line
+          y2="20"
+          transform="translate(347.5 10)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="matrix(0.966, 0.259, -0.259, 0.966, 350.088, 10.341)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(352.5 11.34) rotate(30)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(354.571 12.929) rotate(45)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(356.16 15) rotate(60)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="matrix(0.259, 0.966, -0.966, 0.259, 357.159, 17.412)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(357.5 20) rotate(90)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="matrix(-0.259, 0.966, -0.966, -0.259, 357.159, 22.588)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(356.16 25) rotate(120)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(354.571 27.071) rotate(135)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="translate(352.5 28.66) rotate(150)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+        <line
+          y2="20"
+          transform="matrix(-0.966, 0.259, -0.259, -0.966, 350.088, 29.659)"
+          fill="none"
+          stroke="#000"
+          stroke-width="0.5"
+        />
+      </g>
+    </svg>
+  );
+};
 
 export default function Services() {
   return (
@@ -18,7 +118,7 @@ export default function Services() {
         />
         <div className="z-10 dark:text-black  text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
           <div className="w-full">
-            <FullWidthText word1={"TOOLS & FRAMEWORKS"} />
+            <FullStaticText word1={"TOOLS & FRAMEWORKS"} />
           </div>
           <div className="flex items-start justify-end">
             <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
@@ -40,19 +140,19 @@ export default function Services() {
             <div className="content flex items-center">
               NEXTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               REACTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               GATSBYJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               ANGULAR2+
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               GIT
             </div>
@@ -63,31 +163,19 @@ export default function Services() {
             <div className="content flex items-center">
               NEXTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img
-                  src={flower}
-                  className="w-full rotrev h-full object-cover"
-                />
+                <Flower />
               </div>
               REACTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img
-                  src={flower}
-                  className="w-full h-full rotrev object-cover"
-                />
+                <Flower />
               </div>
               GATSBYJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img
-                  src={flower}
-                  className="w-full h-full rotrev object-cover"
-                />
+                <Flower />
               </div>
               ANGULAR2+
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img
-                  src={flower}
-                  className="w-full h-full rotrev object-cover"
-                />
+                <Flower />
               </div>
               GIT
             </div>
@@ -98,19 +186,19 @@ export default function Services() {
             <div className="content flex items-center">
               NEXTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               REACTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               GATSBYJS
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               ANGULAR2+
               <div className=" w-20 mx-16 relative overflow-hidden">
-                <img src={flower} className="w-full h-full rot object-cover" />
+                <Flower />
               </div>
               GIT
             </div>

@@ -1,0 +1,16 @@
+<svg stroke="white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+<g transform="translate(-337.5 -10)">
+<line y2="20" transform="translate(347.5 10)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="matrix(0.966, 0.259, -0.259, 0.966, 350.088, 10.341)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(352.5 11.34) rotate(30)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(354.571 12.929) rotate(45)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(356.16 15) rotate(60)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="matrix(0.259, 0.966, -0.966, 0.259, 357.159, 17.412)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(357.5 20) rotate(90)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="matrix(-0.259, 0.966, -0.966, -0.259, 357.159, 22.588)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(356.16 25) rotate(120)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(354.571 27.071) rotate(135)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="translate(352.5 28.66) rotate(150)" fill="none" stroke="#000" stroke-width="0.5"/>
+<line y2="20" transform="matrix(-0.966, 0.259, -0.259, -0.966, 350.088, 29.659)" fill="none" stroke="#000" stroke-width="0.5"/>
+</g>
+</svg>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./work.css";
 import FullWidthText from "./FullWidthText";
+import FullStaticText from "./FullStaticText";
 import credoLogo from "../images/projects/credo-logo.svg";
 import theoremLogo from "../images/projects/theorem-logo.svg";
 import escapeLogo from "../images/projects/escape-logo.svg";
@@ -65,7 +66,7 @@ export default function Work() {
         />
         <div className="z-10 dark:text-black text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
           <div className="w-full">
-            <FullWidthText word1={"Case Studies"} />
+            <FullStaticText word1={"Case Studies"} />
           </div>
           <div className="flex items-start justify-end">
             <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
