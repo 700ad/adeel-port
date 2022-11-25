@@ -139,7 +139,7 @@ const Nav = () => {
               CASE STUDIES
             </div>
             <div
-              onClick={() => navigateTo("/case-studies")}
+              onClick={() => navigateTo("/about")}
               className="text-[12vh] my-2 font-medium py-2 w-fit opacity-0 nitem leading-none cursor-pointer"
             >
               ABOUT
