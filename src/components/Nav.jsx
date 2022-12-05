@@ -1,178 +1,107 @@
+//
 import React, { useEffect, useState } from "react";
-
 import gsap from "gsap/dist/gsap";
 
-import ThemeToggle from "./themeToggle";
-
-import { Link, navigate } from "gatsby";
-
-const Nav = () => {
+export default function Nav() {
   const [menu, setMenu] = useState(false);
-
-  const [hovering, setHovering] = useState(0);
-
   const showMenu = () => {
-    gsap.to(".fix-header", {
-      display: "flex",
-      duration: 0.1,
-      onStart: () => {
-        gsap.to(".rects div", {
-          transform: "translateY(0)",
+    const tl = gsap.timeline();
+    tl.to(".rects", {
+      transform: "translateY(0px)",
+    })
+      .to(".rects div", {
+        transform: "translateY(0px)",
+        stagger: 0.2,
+        duration: 1.4,
+        ease: "circ.inout",
+      })
+      .to(
+        ".navitem",
+        {
           stagger: 0.2,
-          duration: 0.8,
-          ease: "expo.inout",
-          onComplete: () => {
-            gsap.to(".nav-item", {
-              opacity: 1,
-              stagger: 0.15,
-              transform: "translateY(0px)",
-            });
-          },
-        });
-      },
-    });
+          color: "white",
+        },
+        "-=1.2"
+      );
   };
+
   const hideMenu = () => {
-    gsap.to(".nav-item", {
+    const tl = gsap.timeline();
+    tl.to(".navitem", {
+      stagger: 0.2,
       opacity: 0,
-      stagger: 0.15,
-      transform: "translateY(1rem)",
-      onComplete: () => {
-        gsap.to(".rects div", {
+      translateY: "1.5rem",
+    })
+      .to(".rects div", {
+        transform: "translateY(-100vh)",
+        stagger: 0.2,
+        duration: 1.4,
+        ease: "circ.inout",
+      })
+      .to(
+        ".rects",
+        {
           transform: "translateY(-100vh)",
-          stagger: 0.2,
-          duration: 0.8,
-          delay: 0.5,
-          ease: "circ.easeinout",
-          onComplete: () => {
-            gsap.to(".fix-header", {
-              display: "none",
-              duration: 0,
-            });
-          },
-        });
-      },
-    });
+        },
+        "-=1.2"
+      );
   };
-  const navigateTo = (route) => {
-    gsap.to(".nav-item", {
-      opacity: 0,
-      stagger: 0.15,
-      transform: "translateY(1rem)",
-      onComplete: () => {
-        navigate(route);
-        gsap.to(".rects div", {
-          transform: "translateY(-100vh)",
-          stagger: 0.2,
-          duration: 0.8,
-          delay: 0.5,
-          ease: "circ.easeinout",
-          onComplete: () => {
-            gsap.to(".fix-header", {
-              transform: "translateY(-100vh)",
-              duration: 0.01,
-            });
-          },
-        });
-      },
-    });
-  };
+
+  useEffect(() => {}, []);
 
   return (
     <>
-      <div className="absolute z-40 top-0 left-0 right-0 md:h-20 flex items-center justify-between">
+      <div className="absolute z-[60] top-0 left-0 right-0 md:h-20 flex items-center justify-between">
         <nav className="w-full md:p-8 p-4 flex items-center justify-between">
-          <div className="font-semibold uppercase md:text-xl dark:text-white text-black">
+          <div className="font-semibold navitem uppercase md:text-xl dark:text-white text-black">
             Adeel Farzand
           </div>
           <div className="flex items-center justify-end">
-            <ThemeToggle />
-            <div
-              onClick={() => showMenu()}
-              className="h-10 py-1 w-12 hover:bg-black/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
+            {/* <ThemeToggle /> */}
+
+            <button className="bg-black navbtn text-white px-4 rounded-full mr-4 py-1 cursor-pointers">
+              Dark Theme
+            </button>
+            <button
+              onClick={() => {
+                showMenu();
+              }}
+              className="h-10 py-1 w-12 navmenu hover:bg-black/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
             >
               <div className="w-8 border border-black dark:border-white "></div>
               <div className="w-8 border border-black dark:border-white"></div>
               <div className="w-8 border border-black dark:border-white"></div>
-            </div>
+            </button>
           </div>
         </nav>
       </div>
-
-      <div className="w-screen h-screen fix-header hidden fixed inset-0 z-50">
-        <div className="absolute rects inset-0 flex">
-          <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
-          <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
-          <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
-          <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
-          <div className="w-1/5 h-screen translate-y-[-100vh] bg-black  dark:bg-white"></div>
-        </div>
-
-        <nav className="w-full absolute md:h-20 top-0 left-0 right-0 z-50 nav md:p-8 p-4 flex items-center justify-between">
-          <div className="font-semibold translate-y-4 opacity-0 nav-item uppercase md:text-xl dark:text-black text-white">
-            Adeel Farzand
-          </div>
-          <div className="flex items-center justify-end">
-            <div
-              onClick={() => hideMenu()}
-              className="h-10 py-1 w-12 nav-item opacity-0 hover:bg-white/10 dark:hover:bg-black/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
-            >
-              <div className="w-8 border border-white dark:border-black "></div>
-              <div className="w-8 border border-white dark:border-black"></div>
+      <div className="absolute translate-y-[-100vh] flex z-50  changer rects inset-0 ">
+        <div className="w-1/5 translate-y-[-100vh] h-screen bg-black border-r border-white/20"></div>
+        <div className="w-1/5 translate-y-[-100vh] h-screen bg-black border-r border-white/20"></div>
+        <div className="w-1/5 translate-y-[-100vh] h-screen bg-black border-r border-white/20"></div>
+        <div className="w-1/5 translate-y-[-100vh] h-screen bg-black border-r border-white/20"></div>
+        <div className="w-1/5 translate-y-[-100vh] h-screen bg-black border-r border-white/20"></div>
+        {/* <div className="absolute z-10 top-0 left-0 right-0 md:h-20 flex items-center justify-between">
+          <nav className="w-full md:p-8 p-4 flex items-center justify-between">
+            <div className="font-semibold opacity-0 navitem translate-y-6 uppercase md:text-xl dark:text-white text-white">
+              Adeel Farzand
             </div>
-          </div>
-        </nav>
-        <div className=" absolute inset-0 pt-20 px-10">
-          <div className="grid grid-cols-2 gap-8">
-            <div className="text-white dark:text-black menulink flex flex-col items-start justify-between">
-              <div
-                onMouseEnter={() => setHovering(2)}
-                onMouseLeave={() => setHovering(0)}
-                onClick={() => navigateTo("/")}
-                className="text-9xl nav-item opacity-0 cursor-pointer my-2"
+            <div className="flex items-center justify-end">
+              <ThemeToggle />
+              <button className="bg-black opacity-0 navitem translate-y-6 text-white px-2 py-2 cursor-pointers">
+                Hide Nav
+              </button>
+              <button
+                onClick={() => hideMenu()}
+                className="h-10 py-1 w-12 opacity-0 navitem translate-y-6 hover:bg-white/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly"
               >
-                Home
-              </div>
-              <div
-                onMouseEnter={() => setHovering(1)}
-                onMouseLeave={() => setHovering(0)}
-                onClick={() => navigateTo("/case-studies")}
-                className="text-9xl nav-item opacity-0 cursor-pointer my-2"
-              >
-                Case Studies
-              </div>
-
-              <div
-                onMouseEnter={() => setHovering(3)}
-                onMouseLeave={() => setHovering(0)}
-                onClick={() => navigateTo("/about")}
-                className="text-9xl nav-item opacity-0 cursor-pointer my-2"
-              >
-                About
-              </div>
-              <div
-                onMouseEnter={() => setHovering(4)}
-                onMouseLeave={() => setHovering(0)}
-                onClick={() => navigateTo("/contact")}
-                className="text-9xl nav-item opacity-0 cursor-pointer my-2"
-              >
-                Contact
-              </div>
+                <div className="w-8 border border-white dark:border-white "></div>
+                <div className="w-8 border border-white dark:border-white"></div>
+              </button>
             </div>
-            <div className="flex items-center justify-center">
-              <div
-                className={`w-1/2 nav-item opacity-0 border aspect-square transition-all duration-300 
-                ${hovering === 1 ? "bg-orange-500" : ""}
-                ${hovering === 2 ? "bg-emerald-500" : ""}
-                ${hovering === 3 ? "bg-amber-500" : ""}
-                ${hovering === 4 ? "bg-indigo-500" : ""}`}
-              ></div>
-            </div>
-          </div>
-        </div>
+          </nav>
+        </div> */}
       </div>
     </>
   );
-};
-
-export default Nav;
+}

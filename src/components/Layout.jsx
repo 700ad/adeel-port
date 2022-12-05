@@ -80,7 +80,7 @@ export default function Layout({ children }) {
     <>
       <div
         id="menu"
-        className="w-screen h-screen fixed inset-0 z-50 flex items-center justify-center"
+        className="w-screen h-screen fixed inset-0 z-[100] flex items-center justify-center"
       >
         <div className="absolute rects inset-0 flex">
           <div className="w-1/5 h-screen  bg-black  dark:bg-white"></div>

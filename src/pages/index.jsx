@@ -30,7 +30,7 @@ const IndexPage = () => {
   return (
     <>
       <Hero />
-      <Work />
+    <Work />
       <Services />
       <Process />
     </>

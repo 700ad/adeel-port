@@ -289,3 +289,7 @@ body::before {
     opacity: 1;
   }
 }
+
+.nitem {
+  @apply text-[15vh] font-medium uppercase leading-none text-white w-fit;
+}
