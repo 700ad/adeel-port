@@ -74,7 +74,7 @@ export default function Work() {
         </div>
       </section>
       {projectList.map((project, ind) => (
-        <div key={ind} className="sticky top-0 p-32 el h-screen grid grid-cols-1 md:grid-cols-2">
+        <div key={ind} className="sticky top-0 p-4 md:p-32 el h-screen grid grid-cols-1 md:grid-cols-2">
           <div className="col-span-1 relative overflow-hidden">
             <img className="ukiyo w-full h-[60vh] md:h-full object-cover" data-u-speed="1.3" src={project.bg} />
             <div className="absolute inset-0 flex items-start pt-[40%] justify-center ">
@@ -85,9 +85,9 @@ export default function Work() {
             <div className="uppercase flex flex-col h-full items-start justify-between">
               <div className="flex flex-col">
                 <h3 className="text-4xl text-black dark:text-white md:text-7xl">{project.title}</h3>
-                <div className="pt-8 flex">
+                <div className="pt-8 flex flex-col md:flex-row">
                   {project.services.map((service, ind) => (
-                    <p className="px-2 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit" key={ind}>
+                    <p className="px-2 mb-2 md:mb-0 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit" key={ind}>
                       {service}
                     </p>
                   ))}
@@ -96,7 +96,7 @@ export default function Work() {
               <Link
                 target="_blank"
                 to={project.route}
-                className="bg-black mt-2 py-2 w-1/2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
+                className="bg-black mt-2 py-2 md:w-1/2 w-full text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
               >
                 View Project
               </Link>

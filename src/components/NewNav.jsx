@@ -95,22 +95,22 @@ export default function Nav() {
         <div className="bg-black menubgInnerDiv translate-y-[-100vh] dark:bg-white w-1/5 h-screen"></div>
         <div className="menubgInnerMenu absolute inset-0">
           <div className="grid h-screen grid-cols-2 ">
-            <div className="py-20 px-4 md:px-8">
-              <div onClick={() => menuNavigate("/")} className="text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
+            <div className="py-20 col-span-2 px-4 md:px-8">
+              <div onClick={() => menuNavigate("/")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
                 Home
               </div>
-              <div onClick={() => menuNavigate("/case-studies")} className="text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/case-studies")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
                 Case Studies
               </div>
-              <div onClick={() => menuNavigate("/about")} className="text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/about")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
                 About
               </div>
-              <div onClick={() => menuNavigate("/contact")} className="text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/contact")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 translate-y-2 font-medium text-white dark:text-black leading-none uppercase">
                 Contact
               </div>
             </div>
-            <div className="col-span-1 flex items-end justify-end py-20 px-4 md:px-8">
-              <div className="grid grid-cols-6 gap-8">
+            <div className="md:col-span-1 flex items-end justify-end py-20 px-4 md:px-8">
+              <div className="grid md:grid-cols-6 grid-cols-3 gap-8">
                 <div className="col-span-1 menubgInnerItem opacity-0  p-8 bg-gradient-to-br dark:from-white dark:to-gray-300 from-black to-gray-700 aspect-square cursor-pointer">
                   <svg className="filter dark:invert-0 invert " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="none" d="M0 0h24v24H0z" />
@@ -136,9 +136,6 @@ export default function Nav() {
             <nav className="w-full md:p-8 p-4 flex items-center justify-between">
               <div className="font-semibold  uppercase md:text-xl dark:text-blalck text-white dark:text-black menubgInnerItem opacity-0 translate-y-2">Adeel Farzand</div>
               <div className="flex items-center justify-end">
-                <div className="menubgInnerItem opacity-0 translate-y-2">
-                  <NavThemeToggle />
-                </div>
                 <button onClick={() => hideMenu()} className="h-10 py-1 w-12 menubgInnerItem opacity-0 translate-y-2 hover:bg-black/10 dark:hover:bg-white/10 hovanim cursor-pointer flex flex-col items-center justify-evenly">
                   <div className="w-8 border border-white dark:border-black "></div>
                   <div className="w-8 border border-white dark:border-black"></div>
