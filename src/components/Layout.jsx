@@ -23,51 +23,48 @@ export default function Layout({ children }) {
       touchMultiplier: 2,
       infinite: false,
     });
-    lenis.on(
-      "scroll",
-      ({ scroll, limit, velocity, direction, progress }) => {}
-    );
+    lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {});
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-    gsap.to("#slider div", {
-      width: "100%",
-      stagger: 0.1,
-      duration: 0.8,
-      ease: "expo.inout",
-      onComplete: () => {
-        gsap.to(".textitem", {
-          opacity: 0,
-          duration: 0,
-          onComplete: () => {
-            gsap.to("#slider div", {
-              width: "0%",
-              delay: 0.25,
-              stagger: 0.15,
-              duration: 0.8,
-              ease: "expo.inout",
-              onComplete: () => {
-                gsap.to(".rects div", {
-                  transform: "translateY(-100vh)",
-                  stagger: 0.2,
-                  duration: 0.8,
-                  ease: "expo.inout",
-                  onStart: () => {
-                    gsap.to("#menu", {
-                      delay: 1.8,
-                      display: "none",
-                      duration: 0,
-                    });
-                  },
-                });
-              },
-            });
-          },
-        });
-      },
-    });
+    // gsap.to("#slider div", {
+    //   width: "100%",
+    //   stagger: 0.1,
+    //   duration: 0.8,
+    //   ease: "expo.inout",
+    //   onComplete: () => {
+    //     gsap.to(".textitem", {
+    //       opacity: 0,
+    //       duration: 0,
+    //       onComplete: () => {
+    //         gsap.to("#slider div", {
+    //           width: "0%",
+    //           delay: 0.25,
+    //           stagger: 0.15,
+    //           duration: 0.8,
+    //           ease: "expo.inout",
+    //           onComplete: () => {
+    //             gsap.to(".rects div", {
+    //               transform: "translateY(-100vh)",
+    //               stagger: 0.2,
+    //               duration: 0.8,
+    //               ease: "expo.inout",
+    //               onStart: () => {
+    //                 gsap.to("#menu", {
+    //                   delay: 1.8,
+    //                   display: "none",
+    //                   duration: 0,
+    //                 });
+    //               },
+    //             });
+    //           },
+    //         });
+    //       },
+    //     });
+    //   },
+    // });
     const images = document.querySelectorAll(".ukiyo");
     images.forEach((image) => {
       new Ukiyo(image, {
@@ -78,7 +75,7 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      <div
+      {/* <div
         id="menu"
         className="w-screen h-screen fixed inset-0 z-[100] flex items-center justify-center"
       >
@@ -106,7 +103,7 @@ export default function Layout({ children }) {
             Farzand
           </div>
         </div>
-      </div>
+      </div> */}
       <NewNav />
       {children}
       <Footer />

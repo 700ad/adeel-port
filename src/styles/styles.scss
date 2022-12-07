@@ -248,8 +248,8 @@ body::before {
 }
 .h1 span {
   display: block;
-  
-  animation: h1reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 3s;
+
+  // animation: h1reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 3s;
 }
 
 @keyframes h1reveal {
