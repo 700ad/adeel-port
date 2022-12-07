@@ -51,17 +51,14 @@ export default function Nav() {
 
   return (
     <>
-      <div className="absolute z-[60] top-0 left-0 right-0 md:h-20 flex items-center justify-between">
+
+      <div className="absolute z-[60] top-10 left-0 right-0 md:h-20 flex items-center justify-between">
         <nav className="w-full md:p-8 p-4 flex items-center justify-between">
-          <div className="font-semibold navitem uppercase md:text-xl dark:text-white text-black">
-            Adeel Farzand
-          </div>
+          <div className="font-semibold navitem uppercase md:text-xl dark:text-white text-black">Adeel Farzand</div>
           <div className="flex items-center justify-end">
             {/* <ThemeToggle /> */}
 
-            <button className="bg-black navbtn text-white px-4 rounded-full mr-4 py-1 cursor-pointers">
-              Dark Theme
-            </button>
+            <button className="bg-black navbtn text-white px-4 rounded-full mr-4 py-1 cursor-pointers">Dark Theme</button>
             <button
               onClick={() => {
                 showMenu();

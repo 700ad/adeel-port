@@ -74,7 +74,16 @@ export default function Nav() {
 
   return (
     <>
-      <div className="absolute z-40 top-0 left-0 right-0 md:h-20 flex items-center justify-between">
+      <div className="bg-black dark:bg-white text-white dark:text-black absolute top-0 left-0 right-0 h-8">
+        <div className="marqueeFull  uppercase text-brand-100">
+          <div className="trackFull text-xl">
+            SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE
+            DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER
+            ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT - SITE UNDER ACTIVE DEVELOPMENT -{" "}
+          </div>
+        </div>
+      </div>
+      <div className="absolute z-40 top-8 left-0 right-0 md:h-20 flex items-center justify-between">
         <nav className="w-full md:p-8 p-4 flex items-center justify-between">
           <div className="font-semibold navitem uppercase md:text-xl dark:text-white text-black">Adeel Farzand</div>
           <div className="flex items-center justify-end">
