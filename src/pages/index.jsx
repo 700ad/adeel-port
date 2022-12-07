@@ -5,6 +5,7 @@ import Work from "../components/Work";
 import Process from "../components/Process";
 import Services from "../components/Services";
 import Cta from "../components/Cta";
+import Ukiyo from "ukiyojs";
 
 const useIntersectionObserver = (ref, options) => {
   const [isIntersecting, setIsIntersecting] = React.useState(false);
@@ -27,6 +28,15 @@ const useIntersectionObserver = (ref, options) => {
 };
 
 const IndexPage = () => {
+  useEffect(() => {
+    const images = document.querySelectorAll(".ukiyo");
+    images.forEach((image) => {
+      new Ukiyo(image, {
+        speed: 2,
+        scale: 1.25,
+      });
+    });
+  }, []);
   return (
     <>
       <Hero />

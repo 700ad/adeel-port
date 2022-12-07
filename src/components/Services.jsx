@@ -24,10 +24,10 @@ const Flower = () => {
 
 export default function Services() {
   return (
-    <div className="bg-black dark:bg-white">
+    <div className="bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
         <img alt="" className="ukiyo fv_img1 filter dark:invert  " src="https://images.pexels.com/photos/684441/pexels-photo-684441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
-        <div className="z-10 dark:text-black  text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
+        <div className="z-10 dark:text-white  text-black h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
           <div className="w-full">
             <FullStaticText word1={"TOOLS & FRAMEWORKS"} />
           </div>
@@ -43,11 +43,11 @@ export default function Services() {
         <div className="marqueeFull  text-black dark:text-white uppercase text-brand-100">
           <div className="trackFull">
             <div className="content flex items-center">
-              NEXTJS
+              REACTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              REACTJS
+              NEXTJS
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
@@ -66,23 +66,38 @@ export default function Services() {
         <div className="marqueeFullR  text-black dark:text-white uppercase  text-brand-100">
           <div className="trackFullR">
             <div className="content flex items-center">
-              NEXTJS
+              REDUX
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              REACTJS
+              STRAPI
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              GATSBYJS
+              DATOCMS
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              ANGULAR2+
+              TAILWINDCSS
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              GIT
+              REDUX
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              STRAPI
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              DATOCMS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              TAILWINDCSS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
             </div>
           </div>
         </div>
