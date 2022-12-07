@@ -175,7 +175,7 @@ body::before {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marqueeAnim 20s linear infinite;
+  animation: marqueeAnim 30s linear infinite;
 }
 
 @keyframes marqueeAnim {
@@ -200,7 +200,7 @@ body::before {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marqueeAnimR 20s linear infinite;
+  animation: marqueeAnimR 30s linear infinite;
 }
 
 @keyframes marqueeAnimR {

@@ -60,6 +60,29 @@ export default function Services() {
                 <Flower />
               </div>
               GIT
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              REACTJS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              NEXTJS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              GATSBYJS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              ANGULAR2+
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              GIT
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
             </div>
           </div>
         </div>
@@ -70,7 +93,7 @@ export default function Services() {
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              STRAPI
+              GSAP
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
@@ -86,7 +109,7 @@ export default function Services() {
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              STRAPI
+              GSAP
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
@@ -104,23 +127,38 @@ export default function Services() {
         <div className="marqueeFull text-black dark:text-white uppercase text-brand-100">
           <div className="trackFull">
             <div className="content flex items-center">
-              NEXTJS
+              STRAPI
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              REACTJS
+              THREEJS
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              GATSBYJS
+              EXPRESSJS
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              ANGULAR2+
+              MONGODB
               <div className=" w-20 mx-16 relative overflow-hidden">
                 <Flower />
               </div>
-              GIT
+              STRAPI
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              THREEJS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              EXPRESSJS
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
+              MONGODB
+              <div className=" w-20 mx-16 relative overflow-hidden">
+                <Flower />
+              </div>
             </div>
           </div>
         </div>
