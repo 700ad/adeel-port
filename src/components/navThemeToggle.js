@@ -38,11 +38,12 @@ export default function NavThemeToggle() {
                 toggleTheme(theme === "dark" ? "light" : "dark");
               }, 2500);
             }}
-            className="py-1 px-4 cursor-pointer mr-4 bg-white hover:bg-white/60 hover:dark:bg-black/60  transition-all duration-300 dark:bg-black dark:text-white rounded-full uppercase"
+            // className="py-1 px-4 cursor-pointer mr-4 bg-white hover:bg-white/60 hover:dark:bg-black/60  transition-all duration-300 dark:bg-black dark:text-white rounded-full uppercase"
+            className="py-1 px-4 cursor-pointer mr-4 text-sm md:text-base text-black bg-white uppercase rounded-full transition-all duration-300 hover:bg-black dark:bg-black dark:text-white hover:dark:bg-white hover:dark:text-black"
           >
-         {theme === "dark" ? "Light" : "Dark"} Mode
+            {theme === "dark" ? "Light" : "Dark"} Mode
           </button>
-          <div className="fixed z-[100] changer translate-y-[-100vh] flex themrects inset-0 ">
+          <div className="fixed z-[100] changer translate-y-[-100vh] flex themrects inset-0 w-screen h-screen">
             <div className="w-1/5 h-screen translate-y-[-100vh] dark:bg-black bg-white"></div>
             <div className="w-1/5 h-screen translate-y-[-100vh] dark:bg-black bg-white"></div>
             <div className="w-1/5 h-screen translate-y-[-100vh] dark:bg-black bg-white"></div>

@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./work.css";
-import FullWidthText from "./FullWidthText";
 import FullStaticText from "./FullStaticText";
 import credoLogo from "../images/projects/credo-logo.svg";
 import theoremLogo from "../images/projects/theorem-logo.svg";
 import escapeLogo from "../images/projects/escape-logo.svg";
 import facesLogo from "../images/projects/face-logo.svg";
 import wolionLogo from "../images/projects/wolion-logo.svg";
-
-import gsap from "gsap/dist/gsap";
+import { Link } from "gatsby";
 
 const projectList = [
   {
@@ -18,6 +16,7 @@ const projectList = [
     services: ["WEB DESIGN", "WEB DEVELOPMENT"],
     detail: "",
     speed: 0.5,
+    route: "/case-studies/theorem-studio",
   },
   {
     title: "Escape Hotel",
@@ -26,6 +25,7 @@ const projectList = [
     services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
+    route: "/case-studies/escape-hotel",
   },
   {
     title: "Credo",
@@ -34,6 +34,7 @@ const projectList = [
     services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
+    route: "/case-studies/credo",
   },
   {
     title: "theFaces",
@@ -42,6 +43,7 @@ const projectList = [
     services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
+    route: "/case-studies/the-faces",
   },
   {
     title: "Wolion Studio",
@@ -50,6 +52,7 @@ const projectList = [
     services: ["WEB DESIGN"],
     detail: "",
     speed: 0.5,
+    route: "/case-studies/wolion-studio",
   },
 ];
 
@@ -57,42 +60,23 @@ export default function Work() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
-        <img
-          className="ukiyo fv_img1 filter dark:invert"
-          src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          data-u-speed="1.7"
-          data-u-willchange
-          decoding="async"
-        />
+        <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
         <div className="z-10 dark:text-black text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
           <div className="w-full">
             <FullStaticText word1={"Case Studies"} />
           </div>
           <div className="flex items-start justify-end">
             <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse
-              beatae doloremque molestias facilis quo mollitia sed quis itaque
-              vel reprehenderit suscipit nesciunt, aliquid laborum quam
-              repellendus, voluptatibus quia temporibus? Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Delectus, perferendis
-              laudantium, illum possimus soluta aliquid enim, suscipit nostrum
-              voluptatem nobis dolores iste dolore cum illo unde. Dicta soluta
-              odit ratione!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse beatae doloremque molestias facilis quo mollitia sed quis itaque vel reprehenderit suscipit nesciunt, aliquid laborum quam repellendus, voluptatibus quia temporibus? Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Delectus, perferendis laudantium, illum possimus soluta aliquid enim, suscipit nostrum voluptatem nobis dolores iste dolore cum illo unde. Dicta soluta odit ratione!
             </p>
           </div>
         </div>
       </section>
       {projectList.map((project, ind) => (
-        <div
-          key={ind}
-          className="sticky top-0 p-32 el h-screen grid grid-cols-1 md:grid-cols-2"
-        >
+        <div key={ind} className="sticky top-0 p-32 el h-screen grid grid-cols-1 md:grid-cols-2">
           <div className="col-span-1 relative overflow-hidden">
-            <img
-              className="ukiyo w-full h-[60vh] md:h-full object-cover"
-              data-u-speed="1.3"
-              src={project.bg}
-            />
+            <img className="ukiyo w-full h-[60vh] md:h-full object-cover" data-u-speed="1.3" src={project.bg} />
             <div className="absolute inset-0 flex items-start pt-[40%] justify-center ">
               <img src={project.logo} className=" w-40 " />
             </div>
@@ -100,23 +84,22 @@ export default function Work() {
           <div className="col-span-1 bg-white dark:bg-black px-4 md:px-8 md:pt-8">
             <div className="uppercase flex flex-col h-full items-start justify-between">
               <div className="flex flex-col">
-                <h3 className="text-4xl text-black dark:text-white md:text-7xl">
-                  {project.title}
-                </h3>
+                <h3 className="text-4xl text-black dark:text-white md:text-7xl">{project.title}</h3>
                 <div className="pt-8 flex">
                   {project.services.map((service, ind) => (
-                    <p
-                      className="px-2 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit"
-                      key={ind}
-                    >
+                    <p className="px-2 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit" key={ind}>
                       {service}
                     </p>
                   ))}
                 </div>
               </div>
-              <button className="bg-black mt-2 py-2 w-1/2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black">
+              <Link
+                target="_blank"
+                to={project.route}
+                className="bg-black mt-2 py-2 w-1/2 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
+              >
                 View Project
-              </button>
+              </Link>
             </div>
           </div>
         </div>
