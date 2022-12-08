@@ -117,13 +117,13 @@ const Header = () => {
               </p>
             </div>
             <div className="col-span-1"></div>
-            <Link
+            <a
               target="_blank"
               to="https://adeel-adeelfarzand.zohobookings.com/#/customer/adeelfarzand"
               className="bg-black mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
             >
               Get Free Consultation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

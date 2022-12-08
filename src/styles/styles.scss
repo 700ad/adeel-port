@@ -72,7 +72,7 @@ body::before {
     transform: translate(-15%, 5%);
   }
   30% {
-    transform: translate(7%, -25%);
+    transform: translate(9%, -25%);
   }
   40% {
     transform: translate(-5%, 25%);
@@ -81,7 +81,7 @@ body::before {
     transform: translate(-15%, 10%);
   }
   60% {
-    transform: translate(15%, 0%);
+    transform: translate(55%, 0%);
   }
   70% {
     transform: translate(0%, 15%);
@@ -261,8 +261,4 @@ body::before {
     transform: translate(0, 0%);
     opacity: 1;
   }
-}
-
-.ctrans {
-  transform: rotateZ(45deg);
 }

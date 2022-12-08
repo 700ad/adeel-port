@@ -61,18 +61,34 @@ export default function Work() {
     <div className="min-h-screen bg-white dark:bg-black">
       <section className="relative md:h-[140vh] h-screen w-full">
         <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
-        <div className="z-10 dark:text-black text-white h-full flex flex-col items-start justify-between relative p-4 uppercase md:p-8">
+        <div className="z-10 relative dark:text-black text-white h-full flex flex-col items-center justify-between  p-4 uppercase md:p-8">
           <div className="w-full">
             <FullStaticText word1={"Case Studies"} />
           </div>
-          <div className="flex items-start justify-end">
-            <p className="md:w-1/3 uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex esse beatae doloremque molestias facilis quo mollitia sed quis itaque vel reprehenderit suscipit nesciunt, aliquid laborum quam repellendus, voluptatibus quia temporibus? Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Delectus, perferendis laudantium, illum possimus soluta aliquid enim, suscipit nostrum voluptatem nobis dolores iste dolore cum illo unde. Dicta soluta odit ratione!
-            </p>
+          <div className="flex items-center justify-center w-full">
+            <div className="flex items-start justify-end w-full">
+              <p className="md:w-1/3 text-xl md:text-2xl text-justify uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
+                I SPECIALIZE IN NEW BRANDS AND BRAND TRANSFORMATIONS FOR FAST-GROWING INNOVATION COMPANIES. WE CREATE VALUE BY HELPING YOU ADAPT TO A CHANGING MARKET AND WORLD.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+      {/* <section className="relative md:h-[140vh] h-screen w-full">
+        <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
+        <div className="z-10 relative dark:text-black text-white h-full flex flex-col items-center justify-between  p-4 uppercase md:p-8">
+          <div className="w-full">
+            <FullStaticText word1={"Case Studies"} />
+          </div>
+          <div className="flex items-center justify-center w-full">
+            <div className="flex items-start justify-end w-full">
+              <p className="md:w-1/3 text-xl md:text-2xl text-justify uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
+                I SPECIALIZE IN NEW BRANDS AND BRAND TRANSFORMATIONS FOR FAST-GROWING INNOVATION COMPANIES. WE CREATE VALUE BY HELPING YOU ADAPT TO A CHANGING MARKET AND WORLD.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> */}
       {projectList.map((project, ind) => (
         <div key={ind} className="sticky top-0 p-4 md:p-32 el h-screen grid grid-cols-1 md:grid-cols-2">
           <div className="col-span-1 relative overflow-hidden">

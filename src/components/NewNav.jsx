@@ -106,16 +106,16 @@ export default function Nav() {
         <div className="menubgInnerMenu absolute inset-0">
           <div className="grid h-screen grid-cols-2 ">
             <div className="py-20 col-span-2 px-4 md:px-8">
-              <div onClick={() => menuNavigate("/")} className="text-[6vh] ctrans mb-2 md:text-[13vh]  cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/")} className="text-[6vh] mb-2 md:text-[13vh]  cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
                 Home
               </div>
-              <div onClick={() => menuNavigate("/case-studies")} className="text-[6vh] ctrans mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/case-studies")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
                 Case Studies
               </div>
-              <div onClick={() => menuNavigate("/about")} className="text-[6vh] ctrans mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/about")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
                 About
               </div>
-              <div onClick={() => menuNavigate("/contact")} className="text-[6vh] ctrans mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div onClick={() => menuNavigate("/contact")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
                 Contact
               </div>
             </div>
