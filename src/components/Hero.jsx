@@ -4,6 +4,7 @@ import HeroFullWidth from "./HeroFullWidth";
 import gsap from "gsap/dist/gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef } from "react";
+import FullStaticText from "./FullStaticText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,13 +30,7 @@ export default function Hero() {
     <>
       <div id="cont" className="w-screen min-h-screen sunsts p-4 md:px-8 bg-white dark:bg-black text-black dark:text-white grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 pt-16 md:pt-20">
         <div className="col-span-1">
-          <HeroFullWidth word1="ADEEL &copy;" word2="FARZAND">
-            <p>
-              ADEEL <span id="ball">&copy;</span>
-              <br />
-              FARZAND
-            </p>
-          </HeroFullWidth>
+          <HeroFullWidth />
         </div>
         <div className="col-span-1">
           <div className="w-full  heroitem opacity-0 translate-y-3 relative md:h-full h-40 bg-gradient-to-br from-transparent to-gray-900/80 dark:to-gray-200/80"></div>
@@ -46,7 +41,7 @@ export default function Hero() {
           <div className="mt-12 heroitem opacity-0 translate-y-3 rounded-full h-20">
             <a
               target="_blank"
-              to="https://adeel-adeelfarzand.zohobookings.com/#/customer/adeelfarzand"
+              to="https://calendly.com/adeelfarzand/30min-discovery-call"
               className="bg-black mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl uppercase px-8 py-2 hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-500 hover:text-black"
             >
               Get Free Consultation
@@ -54,7 +49,8 @@ export default function Hero() {
           </div>
         </div>
         <div className="col-span-1">
-          <FullWidthText word1="CREATIVE" word2="ENGINEER" />
+          <FullStaticText word1="CREATIVE" word2="ENGINEER" />
+          {/* <FullWidthText word1="CREATIVE" word2="ENGINEER" /> */}
         </div>
       </div>
     </>

@@ -47,7 +47,6 @@ export default function HeroFullWidth({ word1, word2, children }) {
         start: "top top",
         end: "bottom top",
         scrub: 1,
-        markers: true,
       },
       rotate: 360,
     });

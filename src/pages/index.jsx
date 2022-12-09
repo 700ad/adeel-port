@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Work from "../components/Work";
 import Process from "../components/Process";
+import Tools from "../components/Tools";
 import Services from "../components/Services";
 import Cta from "../components/Cta";
 import Ukiyo from "ukiyojs";
@@ -41,8 +42,9 @@ const IndexPage = () => {
     <>
       <Hero />
       <Work />
-      <Services />
+      {/* <Services /> */}
       <Process />
+      <Tools />
     </>
   );
 };

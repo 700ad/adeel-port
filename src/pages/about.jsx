@@ -52,32 +52,15 @@ extend({ ImageFadeMaterial });
 
 function FadingImage() {
   const ref = useRef();
-  const [texture1, texture2, dispTexture] = useTexture([
-    sunrise,
-    sunset,
-    noise3Img,
-  ]);
+  const [texture1, texture2, dispTexture] = useTexture([sunrise, sunset, noise3Img]);
   const [hovered, setHover] = useState(false);
   useFrame(() => {
-    ref.current.dispFactor = THREE.MathUtils.lerp(
-      ref.current.dispFactor,
-      hovered ? 1 : 0,
-      0.065
-    );
+    ref.current.dispFactor = THREE.MathUtils.lerp(ref.current.dispFactor, hovered ? 1 : 0, 0.065);
   });
   return (
-    <mesh
-      onPointerOver={(e) => setHover(true)}
-      onPointerOut={(e) => setHover(false)}
-    >
+    <mesh onPointerOver={(e) => setHover(true)} onPointerOut={(e) => setHover(false)}>
       <planeGeometry />
-      <imageFadeMaterial
-        ref={ref}
-        tex={texture1}
-        tex2={texture2}
-        disp={dispTexture}
-        toneMapped={false}
-      />
+      <imageFadeMaterial ref={ref} tex={texture1} tex2={texture2} disp={dispTexture} toneMapped={false} />
     </mesh>
   );
 }
@@ -89,13 +72,7 @@ const Header = () => {
         <div className="w-full  text-black dark:text-white">
           <div className="absolute inset-0">
             <section className="relative h-full w-full">
-              <img
-                className="ukiyo fv_img1 filter dark:invert-0 invert  "
-                src={sunsi}
-                data-u-speed="2.0"
-                data-u-willchange
-                decoding="async"
-              />
+              <img className="ukiyo fv_img1 filter dark:invert-0 invert  " src={sunsi} data-u-speed="2.0" data-u-willchange decoding="async" />
             </section>
           </div>
           <div className="absolute inset-0">
@@ -106,20 +83,14 @@ const Header = () => {
 
           <FullWidthText word1="ADEEL FARZAND" />
           <div className="grid md:grid-cols-4 grid-cols-1 relative z-10 mt-4">
-            <div className="col-span-1 md:text-3xl text-2xl md:pl-2 font-medium uppercase">
-              FULLSTACK ENGINEER & CREATIVE DEVELOPER
-            </div>
+            <div className="col-span-1 md:text-3xl text-2xl md:pl-2 font-medium uppercase">FULLSTACK ENGINEER & CREATIVE DEVELOPER</div>
             <div className="col-span-1">
-              <p className="leading-none text-sm my-4">
-                I LOVE WRITING CODE & TRAVELING. I'VE BEEN WORKING SINCE 2019.
-                DURING THIS TIME, I REALIZED THAT I LIKE TO COMBINE FUNCTIONAL
-                SOLUTIONS WITH AESTHETICS, MAKING PRODUCTS PEOPLE LOVE.
-              </p>
+              <p className="leading-none text-sm my-4">I LOVE WRITING CODE & TRAVELING. I'VE BEEN WORKING SINCE 2019. DURING THIS TIME, I REALIZED THAT I LIKE TO COMBINE FUNCTIONAL SOLUTIONS WITH AESTHETICS, MAKING PRODUCTS PEOPLE LOVE.</p>
             </div>
             <div className="col-span-1"></div>
             <a
               target="_blank"
-              to="https://adeel-adeelfarzand.zohobookings.com/#/customer/adeelfarzand"
+              to="https://calendly.com/adeelfarzand/30min-discovery-call"
               className="bg-black mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
             >
               Get Free Consultation
