@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `adeelfarzand`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `ADEEL FARZAND`,
+    siteUrl: `https://www.adeelfarzand.com`,
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
       },
     },
     "gatsby-plugin-sharp",

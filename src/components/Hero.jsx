@@ -38,11 +38,11 @@ export default function Hero() {
         <div className="col-span-1 h-full items-center md:items-start justify-between pb-8 flex flex-col row-start-4 md:row-start-2">
           <p className="lg:w-2/5  heroitem opacity-0 translate-y-3 text-xl nord">Helping Companies Generate More Revenue By Creating Better Digital Products</p>
 
-          <div className="mt-12 heroitem opacity-0 translate-y-3 rounded-full h-20">
+          <div className="mb-12 heroitem opacity-0 translate-y-3 rounded-full h-20">
             <a
               target="_blank"
-              to="https://calendly.com/adeelfarzand/30min-discovery-call"
-              className="bg-black mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl uppercase px-8 py-2 hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-500 hover:text-black"
+              href="https://calendly.com/adeelfarzand/30min-discovery-call"
+              className="bg-black relative z-50 mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl uppercase px-8 py-2 hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-500 hover:text-black"
             >
               Get Free Consultation
             </a>

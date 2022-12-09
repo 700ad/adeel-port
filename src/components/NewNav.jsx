@@ -74,7 +74,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="bg-black z-[50] dark:bg-white text-white dark:text-black absolute top-0 left-0 right-0 h-8">
+      <div className="bg-black z-40 dark:bg-white text-white dark:text-black absolute top-0 left-0 right-0 h-8">
         <div className="marqueeFull  uppercase text-brand-100">
           <div className="trackFull text-xl">
             WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER

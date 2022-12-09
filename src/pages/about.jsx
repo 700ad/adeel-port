@@ -90,7 +90,7 @@ const Header = () => {
             <div className="col-span-1"></div>
             <a
               target="_blank"
-              to="https://calendly.com/adeelfarzand/30min-discovery-call"
+              href="https://calendly.com/adeelfarzand/30min-discovery-call"
               className="bg-black mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-3xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
             >
               Get Free Consultation
