@@ -42,7 +42,7 @@ const IndexPage = () => {
     <>
       <Hero />
       <Work />
-      {/* <Services /> */}
+      <Services />
       <Process />
       <Tools />
     </>

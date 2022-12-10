@@ -74,7 +74,7 @@ export default function Nav() {
 
   return (
     <>
-      <div className="bg-black z-40 dark:bg-white text-white dark:text-black absolute top-0 left-0 right-0 h-8">
+      {/* <div className="bg-black z-40 dark:bg-white text-white dark:text-black absolute top-0 left-0 right-0 h-8">
         <div className="marqueeFull  uppercase text-brand-100">
           <div className="trackFull text-xl">
             WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT - WEBSITE IS UNDER
@@ -83,8 +83,8 @@ export default function Nav() {
             DEVELOPMENT - WEBSITE IS UNDER ACTIVE DEVELOPMENT -{" "}
           </div>
         </div>
-      </div>
-      <div className="absolute z-40 top-8 left-0 right-0 md:h-20 flex items-center justify-between">
+      </div> */}
+      <div className="absolute z-40 top-0 left-0 right-0 md:h-20 flex items-center justify-between">
         <nav className="w-full md:p-8 p-4 flex items-center justify-between">
           <div className="font-semibold navitem uppercase md:text-xl dark:text-white text-black">Adeel Farzand</div>
           <div className="flex items-center justify-end">
@@ -106,16 +106,28 @@ export default function Nav() {
         <div className="menubgInnerMenu absolute inset-0">
           <div className="grid h-screen grid-cols-2 ">
             <div className="py-20 col-span-2 px-4 md:px-8">
-              <div onClick={() => menuNavigate("/")} className="text-[6vh] mb-2 md:text-[13vh]  cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div
+                onClick={() => menuNavigate("/")}
+                className="text-[6vh] mb-2 md:text-[13vh]  cursor-pointer w-fit menubgInnerItem opacity-0 hover:text-white/60 dark:hover:text-black/60 transition-all duration-300 font-medium text-white dark:text-black leading-none uppercase"
+              >
                 Home
               </div>
-              <div onClick={() => menuNavigate("/case-studies")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div
+                onClick={() => menuNavigate("/case-studies")}
+                className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 hover:text-white/60 dark:hover:text-black/60 transition-all duration-300  font-medium text-white dark:text-black leading-none uppercase"
+              >
                 Case Studies
               </div>
-              <div onClick={() => menuNavigate("/about")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div
+                onClick={() => menuNavigate("/about")}
+                className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 hover:text-white/60 dark:hover:text-black/60 transition-all duration-300  font-medium text-white dark:text-black leading-none uppercase"
+              >
                 About
               </div>
-              <div onClick={() => menuNavigate("/contact")} className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0  font-medium text-white dark:text-black leading-none uppercase">
+              <div
+                onClick={() => menuNavigate("/contact")}
+                className="text-[6vh] mb-2 md:text-[13vh] cursor-pointer w-fit menubgInnerItem opacity-0 hover:text-white/60 dark:hover:text-black/60 transition-all duration-300  font-medium text-white dark:text-black leading-none uppercase"
+              >
                 Contact
               </div>
             </div>

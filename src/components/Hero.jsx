@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
   return (
     <>
-      <div id="cont" className="w-screen min-h-screen sunsts p-4 md:px-8 bg-white dark:bg-black text-black dark:text-white grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 pt-16 md:pt-20">
+      <div id="cont" className="min-h-screen p-4 md:px-8 bg-white dark:bg-black text-black dark:text-white grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 pt-16 md:pt-20">
         <div className="col-span-1">
           <HeroFullWidth />
         </div>
@@ -42,7 +42,7 @@ export default function Hero() {
             <a
               target="_blank"
               href="https://calendly.com/adeelfarzand/30min-discovery-call"
-              className="bg-black relative z-50 mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl uppercase px-8 py-2 hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-500 hover:text-black"
+              className="bg-black relative z-50 mt-8 text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center md:text-2xl uppercase px-8 py-2 hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-500 hover:text-black"
             >
               Get Free Consultation
             </a>
