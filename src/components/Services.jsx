@@ -12,7 +12,7 @@ const Marquee = ({ word }) => {
   return (
     <div className="marqueeFull uppercase text-black">
       <div className="trackFull">
-        <div className="content text-[8rem]">
+        <div className="content text-[2rem] md:text-[8rem]">
           &nbsp;{word}&nbsp;&nbsp;{word}&nbsp;&nbsp;{word}&nbsp;&nbsp;{word}&nbsp;&nbsp;{word}&nbsp; &nbsp;{word}s&nbsp; &nbsp;{word}s&nbsp; &nbsp;{word}s&nbsp; &nbsp;{word}s&nbsp; &nbsp;{word}s&nbsp; &nbsp;New Horizons&nbsp; &nbsp;{word}s&nbsp; &nbsp;{word}
           s&nbsp; &nbsp;{word}s&nbsp; &nbsp;{word}s&nbsp;
         </div>
@@ -82,7 +82,7 @@ export default function Services() {
         <div className="min-h-screen overflow-hidden">
           <div id="scroller" className="">
             <div id="innerdiv" className="w-[300vw] h-screen flex">
-              <div id="firstScroller" className="w-screen grid grid-cols-2">
+              <div id="firstScroller" className="w-screen grid md:grid-cols-2 grid-cols-1">
                 <div className="col-span-1 flex flex-col pb-10 items-center justify-between relative overflow-hidden">
                   <div className="grid grid-cols-3 w-full">
                     <div className="col-span-3">
@@ -119,7 +119,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div id="secondScroller" className="w-screen relative z-30 grid grid-cols-2">
+              <div id="secondScroller" className="w-screen relative z-30 grid grid-cols-1 md:grid-cols-2">
                 <div className="col-span-1 flex flex-col pb-10 items-center justify-between relative overflow-hidden">
                   <div className="grid grid-cols-3 w-full">
                     <div className="col-span-3">
@@ -156,7 +156,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              <div id="thirdScroller" className="w-screen relative z-30 grid grid-cols-2 p-4 md:p-8">
+              <div id="thirdScroller" className="w-screen relative z-30 grid grid-cols-1 md:grid-cols-2 p-4 md:p-8">
                 <div className="col-span-1 flex flex-col pb-10 items-center justify-between relative overflow-hidden">
                   <div className="grid grid-cols-3 w-full">
                     <div className="col-span-3 flex flex-col relative overflow-hidden">
@@ -189,7 +189,7 @@ export default function Services() {
                   </div>
                 </div>
                 <div className="col-span-1 flex flex-col items-center justify-center">
-                  <div className="bebas text-8xl w-2/3">
+                  <div className=" md:text-8xl w-2/3">
                     <span className=" italic text-orange">TRUSTED</span>
                     &nbsp;&nbsp;BY THOSE WHO KNOW BEST.
                   </div>
