@@ -28,16 +28,20 @@ export default function Hero() {
   }, []);
   return (
     <>
-      <div id="cont" className="min-h-screen p-4 md:px-8 bg-white dark:bg-black text-black dark:text-white grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 pt-16 md:pt-20">
-        <div className="col-span-1">
-          <HeroFullWidth />
+      <div id="cont" className="min-h-screen p-4 md:px-8  text-black dark:text-white grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 pt-16 md:pt-20">
+        <div className="flex flex-col text-black dark:text-white text-[20vw] md:text-[10vw] leading-none">
+          <p data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" data-sal-easing="ease">
+            ADEEL &copy;
+          </p>
+          <p data-sal="slide-up" data-sal-duration="500" data-sal-delay="300" data-sal-easing="ease">
+            FARZAND
+          </p>
         </div>
         <div className="col-span-1">
           <div className="w-full  heroitem opacity-0 translate-y-3 relative md:h-full h-40 bg-gradient-to-br from-transparent to-gray-900/80 dark:to-gray-200/80"></div>
         </div>
         <div className="col-span-1 h-full items-center md:items-start justify-between pb-8 flex flex-col row-start-4 md:row-start-2">
-          <p className="lg:w-2/5  heroitem opacity-0 translate-y-3 text-xl nord">Helping Companies Generate More Revenue By Creating Better Digital Products</p>
-
+          <p className="lg:w-3/5  heroitem opacity-0 translate-y-3 text-xl nord">Helping Companies Generate More Revenue By Creating Better Digital Products</p>
           <div className="mb-12 heroitem opacity-0 translate-y-3 rounded-full h-20">
             <a
               target="_blank"
@@ -48,9 +52,13 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="col-span-1">
-          <FullStaticText word1="CREATIVE" word2="ENGINEER" />
-          {/* <FullWidthText word1="CREATIVE" word2="ENGINEER" /> */}
+        <div className=" row-start-3 md:row-start-auto flex flex-col text-black dark:text-white text-[20vw] md:text-[10vw] leading-none">
+          <p data-sal="slide-up" data-sal-duration="500" data-sal-delay="100" data-sal-easing="ease">
+            CREATIVE
+          </p>
+          <p data-sal="slide-up" data-sal-duration="500" data-sal-delay="300" data-sal-easing="ease">
+            ENGINEER
+          </p>{" "}
         </div>
       </div>
     </>

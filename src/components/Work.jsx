@@ -7,6 +7,10 @@ import escapeLogo from "../images/projects/escape-logo.svg";
 import facesLogo from "../images/projects/face-logo.svg";
 import wolionLogo from "../images/projects/wolion-logo.svg";
 import { Link } from "gatsby";
+import { useEffect } from "react";
+import gsap from "gsap/dist/gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const projectList = [
   {
@@ -60,138 +64,79 @@ const projectList = [
 ];
 
 export default function Work() {
+  useEffect(() => {
+    gsap.to("#a", {
+      scrollTrigger: {
+        trigger: "#a",
+        start: "top top",
+        end: "bottom center",
+        scrub: 0.1,
+      },
+      width: "-=6rem",
+    });
+    gsap.to("#b", {
+      scrollTrigger: {
+        trigger: "#b",
+        start: "top center",
+        end: "bottom center",
+        scrub: 0.1,
+      },
+      width: "-=4rem",
+    });
+    gsap.to("#c", {
+      scrollTrigger: {
+        trigger: "#c",
+        start: "top center",
+        end: "bottom center",
+        scrub: 0.1,
+      },
+      width: "-=2rem",
+    });
+    gsap.to("#d", {
+      scrollTrigger: {
+        trigger: "#d",
+        start: "top center",
+        end: "bottom center",
+        scrub: 0.1,
+      },
+    });
+  }, []);
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
-      <section className="relative md:h-[140vh] h-screen w-full">
-        <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
-        <div className="z-10 relative dark:text-black text-white h-full flex flex-col items-center justify-center  p-4 uppercase md:p-8">
-          <div className="w-full z-10 absolute top-0 left-0 right-0">
-            <FullStaticText word1={"Case Studies"} />
+    <>
+      <div className="h-[120vh] relative mt-16 bg-orange-300">
+        <img alt="" className="w-full h-full object-cover" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <div className="absolute inset-0 px-4 py-2 mx-auto sm:p-4 md:px-8">
+          <div className="p-4 text-[6vh] md:text-[8vh] lg:text-[10vh] leading-none uppercas">
+            WORK I <br /> COMPLETED <br /> RECENTLY
           </div>
-          <div className="flex items-center justify-center w-full">
-            <div className="md:aspect-[2/1] aspect-[1/2] overflow-hidden relative">
-              <img className="w-full ukiyo shadow-2xl shadow-black h-full object-cover filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-              <div className="absolute inset-0">
-                <div className="flex items-center justify-center w-full h-full">
-                  <p className="md:w-2/3 text-lg md:text-2xl uppercase bg-white/0 backdrop-blur-2xl dark:bg-black/10 p-8 rounded-md">
-                    I BUILD LONGTERM RELATIONSHIPS WITH CLIENTS BIG AND NEW. WORK I DO SPANS ACROSS DIFFERENT INDUSTRIES AND DIFFERENT USE CASES. BELOW IS A LIST OF WORK I DELIEVERED IN PREVIOUS YEAR.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="absolute bottom-8 ml-8 right-8 bg-white/20 backdrop-blur-md rounded-md p-4 xl:w-1/4 md:w-2/4 sm:w-3/4 ">
+            I BUILD LONGTERM RELATIONSHIPS WITH CLIENTS BIG AND NEW. WORK I DO SPANS ACROSS DIFFERENT INDUSTRIES AND DIFFERENT USE CASES. BELOW IS A LIST OF WORK I DELIEVERED IN PREVIOUS YEAR.
           </div>
         </div>
-      </section>
-      {/* <section className="relative md:h-[140vh] h-screen w-full">
-        <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
-        <div className="z-10 relative dark:text-black text-white h-full flex flex-col items-center justify-between  p-4 uppercase md:p-8">
-          <div className="w-full">
-            <FullStaticText word1={"Case Studies"} />
-          </div>
-          <div className="flex items-center justify-center w-full">
-            <div className="flex items-start justify-end w-full">
-              <p className="md:w-1/3 text-xl md:text-2xl text-justify uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
-                I SPECIALIZE IN NEW BRANDS AND BRAND TRANSFORMATIONS FOR FAST-GROWING INNOVATION COMPANIES. WE CREATE VALUE BY HELPING YOU ADAPT TO A CHANGING MARKET AND WORLD.
-              </p>
-            </div>
+      </div>
+      <div className="px-4 py-2 mx-auto sm:p-4 md:px-8 min-h-screen">
+        <div id="a" className="sticky top-0 translate-y-10 mx-auto container max-w-5xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
+            <div className="aspect-square w-full bg-red-500"></div>
           </div>
         </div>
-      </section> */}
-      {projectList.map((project, ind) => (
-        <div key={ind} className="sticky top-0 p-4 md:p-32  h-screen grid grid-cols-1 md:grid-cols-2">
-          <div className="col-span-1 relative overflow-hidden">
-            <img className="ukiyo w-full h-[60vh] md:h-full object-cover" data-u-speed="1.3" src={project.bg} />
-            <div className="absolute inset-0 flex items-start pt-[40%] justify-center ">
-              <img src={project.logo} className=" w-40 " />
-            </div>
-          </div>
-          <div className="col-span-1 bg-white dark:bg-black  md:px-8 md:pt-8">
-            <div className="uppercase flex flex-col h-full items-start justify-between">
-              <div className="flex flex-col">
-                <h3 className="text-4xl text-black dark:text-white md:text-7xl">{project.title}</h3>
-                <div className="pt-8 flex flex-col md:flex-row">
-                  {project.services.map((service, ind) => (
-                    <p className="px-2 mb-2 md:mb-0 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit" key={ind}>
-                      {service}
-                    </p>
-                  ))}
-                </div>
-              </div>
-              <Link
-                target="_blank"
-                to={project.route}
-                className="bg-black mt-2 py-2 md:w-1/2 w-full text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
-              >
-                View Project
-              </Link>
-            </div>
+        <div id="b" className="sticky top-0 translate-y-16  mx-auto container max-w-5xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
+            <div className="aspect-square w-full bg-red-500"></div>
           </div>
         </div>
-      ))}
-    </div>
+        <div id="c" className="sticky top-0 translate-y-24 mx-auto container max-w-5xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
+            <div className="aspect-square w-full bg-red-500"></div>
+          </div>
+        </div>
+        <div id="d" className="sticky top-0 translate-y-32 mx-auto container max-w-5xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
+            <div className="aspect-square w-full bg-red-500"></div>
+          </div>
+        </div>
+        <div className="sticky top-0 translate-y-20 mx-auto container max-w-5xl h-96 p-4 "></div>
+      </div>
+    </>
   );
 }
-
-<div className="min-h-screen bg-white dark:bg-black">
-  <section className="relative md:h-[140vh] h-screen w-full">
-    <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
-    <div className="z-10 relative dark:text-black text-white h-full flex flex-col items-center justify-between  p-4 uppercase md:p-8">
-      <div className="w-full">
-        <FullStaticText word1={"Case Studies"} />
-      </div>
-      <div className="flex items-center justify-center w-full">
-        <div className="flex items-start justify-end w-full">
-          <p className="md:w-1/3 text-xl md:text-2xl text-justify uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
-            I SPECIALIZE IN NEW BRANDS AND BRAND TRANSFORMATIONS FOR FAST-GROWING INNOVATION COMPANIES. WE CREATE VALUE BY HELPING YOU ADAPT TO A CHANGING MARKET AND WORLD.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* <section className="relative md:h-[140vh] h-screen w-full">
-    <img className="ukiyo fv_img1 filter dark:invert" src="https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-u-speed="1.7" data-u-willchange decoding="async" />
-    <div className="z-10 relative dark:text-black text-white h-full flex flex-col items-center justify-between  p-4 uppercase md:p-8">
-      <div className="w-full">
-        <FullStaticText word1={"Case Studies"} />
-      </div>
-      <div className="flex items-center justify-center w-full">
-        <div className="flex items-start justify-end w-full">
-          <p className="md:w-1/3 text-xl md:text-2xl text-justify uppercase bg-white/30 dark:bg-black/10 backdrop-blur-md p-4 rounded-md">
-            I SPECIALIZE IN NEW BRANDS AND BRAND TRANSFORMATIONS FOR FAST-GROWING INNOVATION COMPANIES. WE CREATE VALUE BY HELPING YOU ADAPT TO A CHANGING MARKET AND WORLD.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section> */}
-  {projectList.map((project, ind) => (
-    <div key={ind} className="sticky top-0 p-4 md:p-32 el h-screen grid grid-cols-1 md:grid-cols-2">
-      <div className="col-span-1 relative overflow-hidden">
-        <img className="ukiyo w-full h-[60vh] md:h-full object-cover" data-u-speed="1.3" src={project.bg} />
-        <div className="absolute inset-0 flex items-start pt-[40%] justify-center ">
-          <img src={project.logo} className=" w-40 " />
-        </div>
-      </div>
-      <div className="col-span-1 bg-white dark:bg-black px-4 md:px-8 md:pt-8">
-        <div className="uppercase flex flex-col h-full items-start justify-between">
-          <div className="flex flex-col">
-            <h3 className="text-4xl text-black dark:text-white md:text-7xl">{project.title}</h3>
-            <div className="pt-8 flex flex-col md:flex-row">
-              {project.services.map((service, ind) => (
-                <p className="px-2 mb-2 md:mb-0 text-xl border mr-8 rounded-md border-black dark:border-white text-black dark:text-white w-fit" key={ind}>
-                  {service}
-                </p>
-              ))}
-            </div>
-          </div>
-          <Link
-            target="_blank"
-            to={project.route}
-            className="bg-black mt-2 py-2 md:w-1/2 w-full text-white cursor-pointer dark:text-black dark:bg-white flex items-center justify-center text-2xl hover:bg-white/10 hover:dark:bg-black/10 hover:dark:text-white transition-all duration-300 hover:text-black"
-          >
-            View Project
-          </Link>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>;

@@ -39,16 +39,16 @@ const IndexPage = () => {
     });
   }, []);
   return (
-    <>
+    <div className="bg-white dark:bg-black">
       <Hero />
-      <Work />
       <Services />
+      <Work />
       <Process />
       <Tools />
-    </>
+    </div>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Adeel Farzand &mdash; Portfolio</title>;

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Dragon from "../components/Dragon";
-import World from "../components/World";
 
 const Footer = () => {
   const copyContent = async (text) => {
