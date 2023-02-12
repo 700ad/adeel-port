@@ -115,27 +115,56 @@ export default function Work() {
         </div>
       </div>
       <div className="px-4 py-2 mx-auto sm:p-4 md:px-8 min-h-screen">
-        <div id="a" className="sticky top-0 translate-y-10 mx-auto container max-w-5xl h-[100vh] p-4 ">
-          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
-            <div className="aspect-square w-full bg-red-500"></div>
+        <div id="a" className="sticky top-24 translate-y-10 mx-auto container max-w-6xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black rounded-md p-4 grid grid-cols-2 gap-4">
+            <div className="col-span-1 flex flex-col items-start">
+              <span>01</span>
+              <p className="text-5xl">Designs That Get People to Say WOW</p>
+            </div>
+            <div className="col-span-1">
+              <div className="w-10/12">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis explicabo repellat illum libero doloremque aliquam nesciunt ea labore veniam neque eligendi repudiandae quidem beatae officiis, eveniet autem, esse illo odit?
+              </div>
+            </div>
           </div>
         </div>
-        <div id="b" className="sticky top-0 translate-y-16  mx-auto container max-w-5xl h-[100vh] p-4 ">
-          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
-            <div className="aspect-square w-full bg-red-500"></div>
+        <div id="b" className="sticky top-24 translate-y-16  mx-auto container max-w-6xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black rounded-md p-4 grid grid-cols-2 gap-4">
+            <div className="col-span-1 flex items-center">
+              <p className="text-6xl">Design</p>
+            </div>
+            <div className="col-span-1">
+              <div className="w-10/12">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis explicabo repellat illum libero doloremque aliquam nesciunt ea labore veniam neque eligendi repudiandae quidem beatae officiis, eveniet autem, esse illo odit?
+              </div>
+            </div>
           </div>
         </div>
-        <div id="c" className="sticky top-0 translate-y-24 mx-auto container max-w-5xl h-[100vh] p-4 ">
-          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
-            <div className="aspect-square w-full bg-red-500"></div>
+        <div id="c" className="sticky top-24 translate-y-24 mx-auto container max-w-6xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black rounded-md p-4 grid grid-cols-2 gap-4">
+            <div className="col-span-1 flex items-center">
+              <p className="text-6xl">Design</p>
+            </div>
+            <div className="col-span-1">
+              <div className="w-10/12">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis explicabo repellat illum libero doloremque aliquam nesciunt ea labore veniam neque eligendi repudiandae quidem beatae officiis, eveniet autem, esse illo odit?
+              </div>
+            </div>
           </div>
         </div>
-        <div id="d" className="sticky top-0 translate-y-32 mx-auto container max-w-5xl h-[100vh] p-4 ">
-          <div className="bg-white border border-black p-4 grid grid-cols-2 gap-4">
-            <div className="aspect-square w-full bg-red-500"></div>
+        <div id="d" className="sticky top-24 translate-y-32 mx-auto container max-w-6xl h-[100vh] p-4 ">
+          <div className="bg-white border border-black rounded-md p-4 grid grid-cols-2 gap-4">
+            <div className="col-span-1 flex items-center">
+              <p className="text-6xl">Design</p>
+            </div>
+            <div className="col-span-1">
+              <div className="w-10/12">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis explicabo repellat illum libero doloremque aliquam nesciunt ea labore veniam neque eligendi repudiandae quidem beatae officiis, eveniet autem, esse illo odit?
+              </div>
+            </div>
           </div>
         </div>
-        <div className="sticky top-0 translate-y-20 mx-auto container max-w-5xl h-96 p-4 "></div>
+        <div className="sticky top-24 translate-y-20 mx-auto container max-w-6xl h-96 p-4 "></div>
       </div>
     </>
   );
